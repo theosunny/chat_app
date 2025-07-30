@@ -11,7 +11,7 @@ class ApiService {
   
   // 基础URL - 开发模式使用本地地址
   static const String baseUrl = kDebugMode 
-      ? 'http://localhost:8080/api' // 开发模式
+      ? 'http://10.0.2.2:8080/api' // 开发模式 - Android模拟器访问宿主机
       : 'https://api.driftbottle.com'; // 生产模式
   
   void init() {

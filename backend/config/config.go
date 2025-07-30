@@ -14,7 +14,7 @@ type Config struct {
 func LoadConfig() *Config {
 	return &Config{
 		DatabaseDSN: getEnv("DATABASE_DSN", "chat:123456@tcp(localhost:3306)/chatapp?charset=utf8mb4&parseTime=True&loc=Local"),
-		ServerPort:  getEnv("SERVER_PORT", ":8080"),
+		ServerPort:  getEnv("SERVER_PORT", "0.0.0.0:8080"),
 		JWTSecret:   getEnv("JWT_SECRET", "your-secret-key"),
 	}
 }
