@@ -1,0 +1,48 @@
+<svg width="375" height="812" viewBox="0 0 375 812" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="bubbleGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.1" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="375" height="812" fill="url(#mainGradient)"/>
+  
+  <!-- Floating bubbles -->
+  <circle cx="80" cy="150" r="25" fill="url(#bubbleGradient)" opacity="0.6"/>
+  <circle cx="320" cy="200" r="15" fill="url(#bubbleGradient)" opacity="0.4"/>
+  <circle cx="50" cy="350" r="20" fill="url(#bubbleGradient)" opacity="0.5"/>
+  <circle cx="300" cy="450" r="30" fill="url(#bubbleGradient)" opacity="0.3"/>
+  <circle cx="120" cy="600" r="18" fill="url(#bubbleGradient)" opacity="0.7"/>
+  <circle cx="280" cy="700" r="22" fill="url(#bubbleGradient)" opacity="0.4"/>
+  
+  <!-- Bottle shapes -->
+  <g transform="translate(30, 100)" opacity="0.1">
+    <path d="M15 0 L25 0 L25 10 L30 15 L30 40 L10 40 L10 15 Z" fill="#ffffff" filter="url(#glow)"/>
+  </g>
+  
+  <g transform="translate(300, 300)" opacity="0.08">
+    <path d="M15 0 L25 0 L25 10 L30 15 L30 40 L10 40 L10 15 Z" fill="#ffffff" filter="url(#glow)"/>
+  </g>
+  
+  <g transform="translate(60, 500)" opacity="0.12">
+    <path d="M15 0 L25 0 L25 10 L30 15 L30 40 L10 40 L10 15 Z" fill="#ffffff" filter="url(#glow)"/>
+  </g>
+  
+  <!-- Wave patterns -->
+  <path d="M0 400 Q100 380 200 400 T400 400 L400 450 Q300 430 200 450 T0 450 Z" fill="#ffffff" opacity="0.05"/>
+  <path d="M0 600 Q150 580 300 600 T600 600 L600 650 Q450 630 300 650 T0 650 Z" fill="#ffffff" opacity="0.08"/>
+</svg>

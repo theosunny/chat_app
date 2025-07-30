@@ -1,0 +1,100 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 主图标渐变 -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 瓶子渐变 -->
+    <linearGradient id="bottleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#74b9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0984e3;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 光晕效果 -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- 阴影效果 -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- 背景圆形 -->
+  <circle cx="60" cy="60" r="55" fill="url(#iconGradient)" filter="url(#shadow)"/>
+  
+  <!-- 内部装饰圆环 -->
+  <circle cx="60" cy="60" r="45" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.3"/>
+  
+  <!-- 漂流瓶主体 -->
+  <g transform="translate(60, 60)" filter="url(#glow)">
+    <!-- 瓶身 -->
+    <ellipse cx="0" cy="5" rx="18" ry="28" fill="url(#bottleGradient)" opacity="0.9"/>
+    
+    <!-- 瓶身高光 -->
+    <ellipse cx="-6" cy="-2" rx="4" ry="15" fill="#ffffff" opacity="0.4"/>
+    
+    <!-- 瓶口 -->
+    <rect x="-6" y="-28" width="12" height="10" rx="2" fill="#2d3436" opacity="0.8"/>
+    
+    <!-- 瓶塞 -->
+    <rect x="-4" y="-32" width="8" height="6" rx="2" fill="#e17055"/>
+    
+    <!-- 瓶塞装饰 -->
+    <rect x="-2" y="-30" width="4" height="2" rx="1" fill="#d63031" opacity="0.8"/>
+    
+    <!-- 信件/纸条 -->
+    <g transform="translate(0, 8)" opacity="0.9">
+      <rect x="-8" y="-12" width="16" height="20" rx="2" fill="#ffffff" opacity="0.95"/>
+      <!-- 文字线条 -->
+      <line x1="-6" y1="-8" x2="6" y2="-8" stroke="#636e72" stroke-width="1" opacity="0.6"/>
+      <line x1="-6" y1="-4" x2="4" y2="-4" stroke="#636e72" stroke-width="1" opacity="0.6"/>
+      <line x1="-6" y1="0" x2="6" y2="0" stroke="#636e72" stroke-width="1" opacity="0.6"/>
+      <line x1="-6" y1="4" x2="2" y2="4" stroke="#636e72" stroke-width="1" opacity="0.6"/>
+    </g>
+    
+    <!-- 爱心装饰 -->
+    <g transform="translate(12, -8) scale(0.6)" opacity="0.8">
+      <path d="M12,21.35l-1.45-1.32C5.4,15.36,2,12.28,2,8.5 C2,5.42,4.42,3,7.5,3c1.74,0,3.41,0.81,4.5,2.09C13.09,3.81,14.76,3,16.5,3 C19.58,3,22,5.42,22,8.5c0,3.78-3.4,6.86-8.55,11.54L12,21.35z" 
+            fill="#e84393" transform="translate(-12, -12)"/>
+    </g>
+    
+    <!-- 波浪装饰 -->
+    <path d="M-15,25 Q-7.5,20 0,25 T15,25" stroke="#74b9ff" stroke-width="2" fill="none" opacity="0.6">
+      <animate attributeName="d" 
+               values="M-15,25 Q-7.5,20 0,25 T15,25;
+                       M-15,25 Q-7.5,30 0,25 T15,25;
+                       M-15,25 Q-7.5,20 0,25 T15,25" 
+               dur="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+  
+  <!-- 装饰星星 -->
+  <g transform="translate(25, 25)" opacity="0.6">
+    <polygon points="0,-4 1.2,-1.2 4,0 1.2,1.2 0,4 -1.2,1.2 -4,0 -1.2,-1.2" 
+             fill="#ffffff">
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="0;360" dur="8s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+  <g transform="translate(95, 35)" opacity="0.5">
+    <polygon points="0,-3 0.9,-0.9 3,0 0.9,0.9 0,3 -0.9,0.9 -3,0 -0.9,-0.9" 
+             fill="#ffffff">
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="0;-360" dur="6s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+  <!-- 底部光晕 -->
+  <ellipse cx="60" cy="105" rx="30" ry="8" fill="#667eea" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.1;0.3" dur="2s" repeatCount="indefinite"/>
+  </ellipse>
+</svg>

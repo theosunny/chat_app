@@ -1,0 +1,47 @@
+<svg width="375" height="812" viewBox="0 0 375 812" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="chatGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fed6e3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d299c2;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="messageGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.1" />
+    </radialGradient>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="375" height="812" fill="url(#chatGradient)"/>
+  
+  <!-- Message bubble shapes -->
+  <ellipse cx="70" cy="150" rx="20" ry="12" fill="url(#messageGradient)" opacity="0.3" filter="url(#softGlow)"/>
+  <ellipse cx="320" cy="220" rx="25" ry="15" fill="url(#messageGradient)" opacity="0.2" filter="url(#softGlow)"/>
+  <ellipse cx="50" cy="350" rx="18" ry="10" fill="url(#messageGradient)" opacity="0.4" filter="url(#softGlow)"/>
+  <ellipse cx="300" cy="450" rx="22" ry="13" fill="url(#messageGradient)" opacity="0.25" filter="url(#softGlow)"/>
+  <ellipse cx="80" cy="580" rx="24" ry="14" fill="url(#messageGradient)" opacity="0.35" filter="url(#softGlow)"/>
+  <ellipse cx="280" cy="680" rx="19" ry="11" fill="url(#messageGradient)" opacity="0.3" filter="url(#softGlow)"/>
+  
+  <!-- Chat icons -->
+  <g transform="translate(30, 100)" opacity="0.08">
+    <circle cx="12" cy="12" r="10" fill="#ffffff" filter="url(#softGlow)"/>
+    <path d="M8 12l2 2 4-4" stroke="#a8edea" stroke-width="2" fill="none"/>
+  </g>
+  
+  <g transform="translate(320, 300)" opacity="0.06">
+    <circle cx="12" cy="12" r="10" fill="#ffffff" filter="url(#softGlow)"/>
+    <path d="M8 12l2 2 4-4" stroke="#fed6e3" stroke-width="2" fill="none"/>
+  </g>
+  
+  <!-- Flowing lines -->
+  <path d="M0 250 Q100 230 200 250 T400 250" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.1"/>
+  <path d="M0 450 Q150 430 300 450 T600 450" stroke="#ffffff" stroke-width="1.5" fill="none" opacity="0.08"/>
+  <path d="M0 650 Q120 630 240 650 T480 650" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.06"/>
+</svg>

@@ -1,0 +1,116 @@
+<svg width="375" height="812" viewBox="0 0 375 812" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 主渐变背景 -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 装饰渐变 -->
+    <radialGradient id="decorGradient1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+    </radialGradient>
+    
+    <radialGradient id="decorGradient2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffeaa7;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#fab1a0;stop-opacity:0" />
+    </radialGradient>
+    
+    <!-- 光晕效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 主背景 -->
+  <rect width="375" height="812" fill="url(#mainGradient)"/>
+  
+  <!-- 装饰圆形 -->
+  <circle cx="80" cy="150" r="60" fill="url(#decorGradient1)" opacity="0.6">
+    <animate attributeName="r" values="60;80;60" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="320" cy="300" r="40" fill="url(#decorGradient2)" opacity="0.5">
+    <animate attributeName="r" values="40;60;40" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="50" cy="500" r="30" fill="url(#decorGradient1)" opacity="0.4">
+    <animate attributeName="r" values="30;45;30" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- 漂流瓶图案 -->
+  <g transform="translate(300, 600)" opacity="0.3">
+    <!-- 瓶身 -->
+    <ellipse cx="0" cy="0" rx="15" ry="25" fill="#ffffff" opacity="0.6"/>
+    <!-- 瓶口 -->
+    <rect x="-5" y="-30" width="10" height="8" rx="2" fill="#ffffff" opacity="0.8"/>
+    <!-- 瓶塞 -->
+    <rect x="-3" y="-35" width="6" height="5" rx="1" fill="#e17055" opacity="0.9"/>
+    
+    <animateTransform attributeName="transform" type="translate" 
+                      values="300,600; 310,590; 300,600" dur="6s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- 心形装饰 -->
+  <g transform="translate(60, 700)" opacity="0.25">
+    <path d="M12,21.35l-1.45-1.32C5.4,15.36,2,12.28,2,8.5 C2,5.42,4.42,3,7.5,3c1.74,0,3.41,0.81,4.5,2.09C13.09,3.81,14.76,3,16.5,3 C19.58,3,22,5.42,22,8.5c0,3.78-3.4,6.86-8.55,11.54L12,21.35z" 
+          fill="#ffffff" opacity="0.6" transform="scale(0.8)"/>
+    
+    <animateTransform attributeName="transform" type="translate" 
+                      values="60,700; 70,690; 60,700" dur="4s" repeatCount="indefinite"/>
+  </g>
+  
+  <!-- 星星装饰 -->
+  <g transform="translate(320, 100)" opacity="0.4">
+    <polygon points="0,-8 2.4,-2.4 8,0 2.4,2.4 0,8 -2.4,2.4 -8,0 -2.4,-2.4" 
+             fill="#ffffff" filter="url(#glow)">
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="0;360" dur="8s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+  <g transform="translate(30, 250)" opacity="0.3">
+    <polygon points="0,-6 1.8,-1.8 6,0 1.8,1.8 0,6 -1.8,1.8 -6,0 -1.8,-1.8" 
+             fill="#ffffff">
+      <animateTransform attributeName="transform" type="rotate" 
+                        values="0;-360" dur="10s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+  
+  <!-- 波浪装饰 -->
+  <path d="M0,650 Q93.75,630 187.5,650 T375,650 L375,812 L0,812 Z" 
+        fill="url(#decorGradient1)" opacity="0.2">
+    <animate attributeName="d" 
+             values="M0,650 Q93.75,630 187.5,650 T375,650 L375,812 L0,812 Z;
+                     M0,660 Q93.75,640 187.5,660 T375,660 L375,812 L0,812 Z;
+                     M0,650 Q93.75,630 187.5,650 T375,650 L375,812 L0,812 Z" 
+             dur="6s" repeatCount="indefinite"/>
+  </path>
+  
+  <!-- 顶部光晕 -->
+  <ellipse cx="187.5" cy="100" rx="150" ry="50" fill="url(#decorGradient1)" opacity="0.3">
+    <animate attributeName="opacity" values="0.3;0.5;0.3" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
+  
+  <!-- 浮动粒子 -->
+  <circle cx="100" cy="400" r="2" fill="#ffffff" opacity="0.8">
+    <animate attributeName="cy" values="400;350;400" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.8;0.3;0.8" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="280" cy="450" r="1.5" fill="#ffffff" opacity="0.6">
+    <animate attributeName="cy" values="450;400;450" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0.2;0.6" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="150" cy="550" r="1" fill="#ffffff" opacity="0.7">
+    <animate attributeName="cy" values="550;500;550" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg>

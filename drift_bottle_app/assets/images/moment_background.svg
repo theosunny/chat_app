@@ -1,0 +1,46 @@
+<svg width="375" height="812" viewBox="0 0 375 812" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="momentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff9a9e;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#fecfef;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fecfef;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="sparkleGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.2" />
+    </radialGradient>
+    <filter id="sparkle">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/> 
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="375" height="812" fill="url(#momentGradient)"/>
+  
+  <!-- Floating sparkles -->
+  <circle cx="60" cy="120" r="3" fill="url(#sparkleGradient)" opacity="0.8" filter="url(#sparkle)"/>
+  <circle cx="300" cy="180" r="2" fill="url(#sparkleGradient)" opacity="0.6" filter="url(#sparkle)"/>
+  <circle cx="80" cy="280" r="4" fill="url(#sparkleGradient)" opacity="0.7" filter="url(#sparkle)"/>
+  <circle cx="320" cy="350" r="2.5" fill="url(#sparkleGradient)" opacity="0.5" filter="url(#sparkle)"/>
+  <circle cx="40" cy="450" r="3.5" fill="url(#sparkleGradient)" opacity="0.9" filter="url(#sparkle)"/>
+  <circle cx="280" cy="520" r="2" fill="url(#sparkleGradient)" opacity="0.4" filter="url(#sparkle)"/>
+  <circle cx="150" cy="600" r="3" fill="url(#sparkleGradient)" opacity="0.6" filter="url(#sparkle)"/>
+  <circle cx="320" cy="680" r="2.5" fill="url(#sparkleGradient)" opacity="0.8" filter="url(#sparkle)"/>
+  
+  <!-- Heart shapes -->
+  <g transform="translate(50, 200)" opacity="0.1">
+    <path d="M12,21.35l-1.45-1.32C5.4,15.36,2,12.28,2,8.5 C2,5.42,4.42,3,7.5,3c1.74,0,3.41,0.81,4.5,2.09C13.09,3.81,14.76,3,16.5,3 C19.58,3,22,5.42,22,8.5c0,3.78-3.4,6.86-8.55,11.54L12,21.35z" fill="#ffffff" filter="url(#sparkle)"/>
+  </g>
+  
+  <g transform="translate(280, 400)" opacity="0.08">
+    <path d="M12,21.35l-1.45-1.32C5.4,15.36,2,12.28,2,8.5 C2,5.42,4.42,3,7.5,3c1.74,0,3.41,0.81,4.5,2.09C13.09,3.81,14.76,3,16.5,3 C19.58,3,22,5.42,22,8.5c0,3.78-3.4,6.86-8.55,11.54L12,21.35z" fill="#ffffff" filter="url(#sparkle)"/>
+  </g>
+  
+  <!-- Soft wave patterns -->
+  <path d="M0 300 Q100 280 200 300 T400 300 L400 350 Q300 330 200 350 T0 350 Z" fill="#ffffff" opacity="0.03"/>
+  <path d="M0 500 Q150 480 300 500 T600 500 L600 550 Q450 530 300 550 T0 550 Z" fill="#ffffff" opacity="0.05"/>
+</svg>
