@@ -82,9 +82,35 @@ class _MomentPageState extends State<MomentPage>
           ),
           // 动态星空效果
           Positioned.fill(
-            child: SvgPicture.asset(
-              'assets/images/starry_background.svg',
-              fit: BoxFit.cover,
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    AppColors.starryPrimary.withOpacity(0.8),
+                    AppColors.starrySecondary.withOpacity(0.6),
+                    AppColors.starryBackground.withOpacity(0.9),
+                  ],
+                ),
+              ),
+              child: SvgPicture.asset(
+                'assets/images/starry_background.svg',
+                fit: BoxFit.cover,
+                placeholderBuilder: (context) => Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        AppColors.starryPrimary.withOpacity(0.8),
+                        AppColors.starrySecondary.withOpacity(0.6),
+                        AppColors.starryBackground.withOpacity(0.9),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ),
           ),
           // 页面内容

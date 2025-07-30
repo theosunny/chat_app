@@ -28,6 +28,9 @@ class _SplashPageState extends State<SplashPage>
     // 初始化API服务
     ApiService().init();
     
+    // 预加载字体，避免文本渲染乱码
+    _preloadFonts();
+    
     _animationController = AnimationController(
       duration: const Duration(seconds: 2),
       vsync: this,
@@ -58,6 +61,24 @@ class _SplashPageState extends State<SplashPage>
   void dispose() {
     _animationController.dispose();
     super.dispose();
+  }
+  
+  // 预加载字体，确保文本渲染稳定
+  void _preloadFonts() {
+    // 通过创建隐藏的Text组件来预加载字体
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) {
+        // 预渲染中文字符，确保字体加载
+        const preloadText = Text(
+          '星空漂流瓶在浩瀚星空中遇见美好发现美好，分享心情正在为您准备精彩内容...',
+          style: TextStyle(
+            fontFamily: 'PingFang SC',
+            fontSize: 0,
+            color: Colors.transparent,
+          ),
+        );
+      }
+    });
   }
   
   Future<void> _checkLoginStatus() async {
@@ -99,9 +120,35 @@ class _SplashPageState extends State<SplashPage>
         children: [
           // SVG背景
           Positioned.fill(
-            child: SvgPicture.asset(
-              'assets/images/splash_background.svg',
-              fit: BoxFit.cover,
+            child: Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Color(0xFF667eea),
+                    Color(0xFF764ba2),
+                    Color(0xFFf093fb),
+                  ],
+                ),
+              ),
+              child: SvgPicture.asset(
+                'assets/images/splash_background.svg',
+                fit: BoxFit.cover,
+                placeholderBuilder: (context) => Container(
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        Color(0xFF667eea),
+                        Color(0xFF764ba2),
+                        Color(0xFFf093fb),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
             ),
           ),
           
@@ -145,6 +192,26 @@ class _SplashPageState extends State<SplashPage>
                                     'assets/images/app_icon.svg',
                                     width: 120.w,
                                     height: 120.w,
+                                    placeholderBuilder: (context) => Container(
+                                      width: 120.w,
+                                      height: 120.w,
+                                      decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(30.r),
+                                        gradient: const LinearGradient(
+                                          begin: Alignment.topLeft,
+                                          end: Alignment.bottomRight,
+                                          colors: [
+                                            Color(0xFF667eea),
+                                            Color(0xFF764ba2),
+                                          ],
+                                        ),
+                                      ),
+                                      child: Icon(
+                                        Icons.local_post_office,
+                                        size: 60.w,
+                                        color: Colors.white,
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ),
@@ -153,9 +220,10 @@ class _SplashPageState extends State<SplashPage>
                               
                               // 应用名称
                               Text(
-                                '遇见漂流瓶',
+                                '星空漂流瓶',
                                 style: TextStyle(
-                                  fontSize: 32.sp,
+                                  fontFamily: 'PingFang SC',
+                                  fontSize: 28.sp,
                                   fontWeight: FontWeight.w600,
                                   color: Colors.white,
                                   letterSpacing: 2.0,
@@ -173,9 +241,10 @@ class _SplashPageState extends State<SplashPage>
                               
                               // 副标题
                               Text(
-                                '遇见是一切的开始',
+                                '在浩瀚星空中遇见美好',
                                 style: TextStyle(
-                                  fontSize: 16.sp,
+                                  fontFamily: 'PingFang SC',
+                                  fontSize: 14.sp,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.white.withOpacity(0.9),
                                   letterSpacing: 1.0,
@@ -228,6 +297,7 @@ class _SplashPageState extends State<SplashPage>
                                   Text(
                                     '发现美好，分享心情',
                                     style: TextStyle(
+                                      fontFamily: 'PingFang SC',
                                       fontSize: 14.sp,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.white.withOpacity(0.9),
@@ -270,6 +340,7 @@ class _SplashPageState extends State<SplashPage>
                               Text(
                                 '正在为您准备精彩内容...',
                                 style: TextStyle(
+                                  fontFamily: 'PingFang SC',
                                   fontSize: 12.sp,
                                   fontWeight: FontWeight.w400,
                                   color: Colors.white.withOpacity(0.7),

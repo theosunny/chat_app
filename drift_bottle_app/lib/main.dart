@@ -53,6 +53,10 @@ class MyApp extends StatelessWidget {
               primarySwatch: Colors.blue,
               primaryColor: AppColors.primary,
               scaffoldBackgroundColor: AppColors.background,
+              fontFamily: 'PingFang SC',
+              textTheme: const TextTheme().apply(
+                fontFamily: 'PingFang SC',
+              ),
               appBarTheme: const AppBarTheme(
                 backgroundColor: AppColors.primary,
                 foregroundColor: Colors.white,

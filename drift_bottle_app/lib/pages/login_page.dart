@@ -21,8 +21,6 @@ class _LoginPageState extends State<LoginPage>
     with SingleTickerProviderStateMixin {
   final _phoneController = TextEditingController();
   final _codeController = TextEditingController();
-  final _usernameController = TextEditingController();
-  final _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   
   late AnimationController _animationController;
@@ -63,46 +61,13 @@ class _LoginPageState extends State<LoginPage>
   
   @override
   void dispose() {
+    _animationController.dispose();
     _phoneController.dispose();
     _codeController.dispose();
-    _usernameController.dispose();
-    _passwordController.dispose();
-    _animationController.dispose();
     super.dispose();
   }
   
-  Future<void> _handleLogin() async {
-    if (_usernameController.text.isEmpty || _passwordController.text.isEmpty) {
-      _showSnackBar('请输入用户名和密码');
-      return;
-    }
-    
-    setState(() {
-      _isLoading = true;
-    });
-    
-    try {
-      final authProvider = Provider.of<AuthProvider>(context, listen: false);
-      final success = await authProvider.loginWithPhone(
-        _usernameController.text,
-        _passwordController.text,
-      );
-      
-      if (success && mounted) {
-        context.go('/home');
-      } else {
-        _showSnackBar('登录失败，请检查用户名和密码');
-      }
-    } catch (e) {
-      _showSnackBar('登录失败：$e');
-    } finally {
-      if (mounted) {
-        setState(() {
-          _isLoading = false;
-        });
-      }
-    }
-  }
+
   
   void _startCountdown() {
     setState(() {
@@ -432,7 +397,7 @@ class _LoginPageState extends State<LoginPage>
             Text(
               '欢迎回来',
               style: TextStyle(
-                fontSize: 28.sp,
+                fontSize: 24.sp,
                 fontWeight: FontWeight.bold,
                 color: Colors.black87,
               ),
@@ -441,54 +406,12 @@ class _LoginPageState extends State<LoginPage>
             SizedBox(height: 8.h),
             
             Text(
-              '请登录您的账号',
+              '请使用手机号登录',
               style: TextStyle(
-                fontSize: 16.sp,
+                fontSize: 14.sp,
                 color: Colors.grey[600],
               ),
-           ),
-           
-           SizedBox(height: 30.h),
-           
-           // 用户名输入框
-           CustomTextField(
-             controller: _usernameController,
-             hintText: '用户名',
-             prefixIcon: Icons.person_outline,
-           ),
-           
-           SizedBox(height: 16.h),
-           
-           // 密码输入框
-            CustomTextField(
-              controller: _passwordController,
-              hintText: '密码',
-              prefixIcon: Icons.lock_outline,
-              obscureText: true,
             ),
-           
-           SizedBox(height: 24.h),
-           
-           // 登录按钮
-           CustomButton(
-             text: '登录',
-             onPressed: _isLoading ? null : _handleLogin,
-             isLoading: _isLoading,
-           ),
-           
-           SizedBox(height: 16.h),
-           
-           // 注册链接
-           TextButton(
-             onPressed: () => context.go('/register'),
-             child: Text(
-               '还没有账号？立即注册',
-               style: TextStyle(
-                 color: AppColors.primary,
-                 fontSize: 14.sp,
-               ),
-             ),
-           ),
             
             SizedBox(height: 30.h),
             
