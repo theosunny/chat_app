@@ -39,8 +39,12 @@ class ApiService {
         // 自动添加Authorization头
         final prefs = await SharedPreferences.getInstance();
         final token = prefs.getString('auth_token');
+        debugPrint('拦截器: 获取到的token: $token');
         if (token != null && token.isNotEmpty) {
           options.headers['Authorization'] = 'Bearer $token';
+          debugPrint('拦截器: 已添加Authorization头: Bearer $token');
+        } else {
+          debugPrint('拦截器: 没有找到有效的token');
         }
         handler.next(options);
       },

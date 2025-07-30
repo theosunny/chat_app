@@ -119,6 +119,37 @@ class AuthService {
     }
   }
   
+  // 检查是否已登录
+  Future<bool> isLoggedIn() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final token = prefs.getString('auth_token');
+      return token != null && token.isNotEmpty;
+    } catch (e) {
+      return false;
+    }
+  }
+  
+  // 获取当前保存的token
+  Future<String?> getCurrentToken() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      return prefs.getString('auth_token');
+    } catch (e) {
+      return null;
+    }
+  }
+  
+  // 验证token是否有效
+  Future<bool> validateToken() async {
+    try {
+      final response = await _apiService.get('/user/profile');
+      return response['success'] ?? false;
+    } catch (e) {
+      return false;
+    }
+  }
+
   // 获取用户信息
   Future<UserModel?> getUserInfo() async {
     try {

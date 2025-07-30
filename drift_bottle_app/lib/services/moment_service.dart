@@ -4,27 +4,18 @@ import 'api_service.dart';
 class MomentService {
   final ApiService _apiService = ApiService();
   
-  // 获取授权头
-  Future<Map<String, String>> _getAuthHeaders() async {
-    final prefs = await SharedPreferences.getInstance();
-    final token = prefs.getString('auth_token') ?? '';
-    return {'Authorization': 'Bearer $token'};
-  }
-  
   // 获取动态列表
   Future<Map<String, dynamic>> getMoments({
     int page = 1,
     int pageSize = 20,
   }) async {
     try {
-      final headers = await _getAuthHeaders();
       final response = await _apiService.get(
         '/moments',
         queryParameters: {
           'page': page,
           'page_size': pageSize,
         },
-        headers: headers,
       );
       return response;
     } catch (e) {
@@ -38,7 +29,6 @@ class MomentService {
     List<String>? imagePaths,
   }) async {
     try {
-      final headers = await _getAuthHeaders();
       List<String> imageUrls = [];
       
       // 如果有图片，先上传图片
@@ -47,7 +37,6 @@ class MomentService {
           final uploadResult = await _apiService.uploadFile(
             '/upload/image',
             imagePath,
-            headers: headers,
           );
           
           if (uploadResult['success']) {
@@ -64,7 +53,6 @@ class MomentService {
           'content': content,
           'images': imageUrls,
         },
-        headers: headers,
       );
       return response;
     } catch (e) {
@@ -75,11 +63,9 @@ class MomentService {
   // 点赞动态
   Future<Map<String, dynamic>> likeMoment(String momentId) async {
     try {
-      final headers = await _getAuthHeaders();
       final response = await _apiService.post(
         '/moments/$momentId/like',
         {},
-        headers: headers,
       );
       return response;
     } catch (e) {
@@ -94,14 +80,12 @@ class MomentService {
     String? replyToId,
   }) async {
     try {
-      final headers = await _getAuthHeaders();
       final response = await _apiService.post(
         '/moments/$momentId/comment',
         {
           'content': content,
           if (replyToId != null) 'reply_to_id': replyToId,
         },
-        headers: headers,
       );
       return response;
     } catch (e) {
@@ -112,10 +96,8 @@ class MomentService {
   // 获取动态详情
   Future<Map<String, dynamic>> getMomentDetail(String momentId) async {
     try {
-      final headers = await _getAuthHeaders();
       final response = await _apiService.get(
         '/moments/$momentId',
-        headers: headers,
       );
       return response;
     } catch (e) {
@@ -126,10 +108,8 @@ class MomentService {
   // 删除动态
   Future<Map<String, dynamic>> deleteMoment(String momentId) async {
     try {
-      final headers = await _getAuthHeaders();
       final response = await _apiService.delete(
         '/moments/$momentId',
-        headers: headers,
       );
       return response;
     } catch (e) {
@@ -144,14 +124,12 @@ class MomentService {
     int pageSize = 20,
   }) async {
     try {
-      final headers = await _getAuthHeaders();
       final response = await _apiService.get(
         '/users/$userId/moments',
         queryParameters: {
           'page': page,
           'page_size': pageSize,
         },
-        headers: headers,
       );
       return response;
     } catch (e) {
@@ -165,14 +143,12 @@ class MomentService {
     int pageSize = 20,
   }) async {
     try {
-      final headers = await _getAuthHeaders();
       final response = await _apiService.get(
         '/moments/my',
         queryParameters: {
           'page': page,
           'page_size': pageSize,
         },
-        headers: headers,
       );
       return response;
     } catch (e) {
@@ -183,10 +159,8 @@ class MomentService {
   // 删除评论
   Future<Map<String, dynamic>> deleteComment(String commentId) async {
     try {
-      final headers = await _getAuthHeaders();
       final response = await _apiService.delete(
         '/comments/$commentId',
-        headers: headers,
       );
       return response;
     } catch (e) {
@@ -200,11 +174,9 @@ class MomentService {
     required String reason,
   }) async {
     try {
-      final headers = await _getAuthHeaders();
       final response = await _apiService.post(
         '/moments/$momentId/report',
         {'reason': reason},
-        headers: headers,
       );
       return response;
     } catch (e) {

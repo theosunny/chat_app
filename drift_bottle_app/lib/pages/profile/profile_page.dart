@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../../models/user_model.dart';
 import '../../providers/auth_provider.dart';
 import '../../widgets/custom_button.dart';
@@ -28,6 +29,16 @@ class _ProfilePageState extends State<ProfilePage>
   bool get wantKeepAlive => true;
 
   final ImagePicker _picker = ImagePicker();
+
+  // 获取当前保存的token
+  Future<String?> _getCurrentToken() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      return prefs.getString('auth_token');
+    } catch (e) {
+      return null;
+    }
+  }
 
   Future<void> _updateAvatar() async {
     try {
@@ -418,6 +429,47 @@ class _ProfilePageState extends State<ProfilePage>
                 ),
                 
                 const SizedBox(height: 30),
+                
+                // 调试信息区域
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 16),
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[100],
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: Colors.grey[300]!),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        '调试信息',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+                      FutureBuilder<String?>(
+                        future: _getCurrentToken(),
+                        builder: (context, snapshot) {
+                          return Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text('Token状态: ${snapshot.hasData && snapshot.data != null ? "已保存" : "未保存"}'),
+                              if (snapshot.hasData && snapshot.data != null)
+                                Text('Token: ${snapshot.data!.substring(0, 20)}...'),
+                              Text('登录状态: ${authProvider.isLoggedIn ? "已登录" : "未登录"}'),
+                              Text('用户ID: ${authProvider.user?.id ?? "无"}'),
+                            ],
+                          );
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                
+                const SizedBox(height: 20),
                 
                 // 退出登录按钮
                 Container(
