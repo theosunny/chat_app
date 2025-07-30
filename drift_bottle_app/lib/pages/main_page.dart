@@ -111,7 +111,7 @@ class _MainPageState extends State<MainPage> {
             Text(
               item.label!,
               style: TextStyle(
-                fontSize: 10.sp,
+                fontSize: 9.sp,
                 color: isSelected
                     ? AppColors.primary
                     : AppColors.textSecondary,

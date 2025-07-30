@@ -140,7 +140,7 @@ class _MomentPageState extends State<MomentPage>
                   Text(
                     '星空动态',
                     style: TextStyle(
-                      fontSize: 20.sp,
+                      fontSize: 18.sp,
                       fontWeight: FontWeight.bold,
                       color: AppColors.starryTextPrimary,
                       letterSpacing: 1.2,

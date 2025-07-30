@@ -157,7 +157,7 @@ class _BottlePageState extends State<BottlePage>
                   Text(
                     '星空漂流瓶',
                     style: TextStyle(
-                      fontSize: 20.sp,
+                      fontSize: 18.sp,
                       fontWeight: FontWeight.bold,
                       color: AppColors.starryTextPrimary,
                       letterSpacing: 1.2,
@@ -292,7 +292,7 @@ class _BottlePageState extends State<BottlePage>
                 Text(
                   '星空漂流瓶',
                   style: TextStyle(
-                    fontSize: 26.sp,
+                    fontSize: 22.sp,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -303,7 +303,7 @@ class _BottlePageState extends State<BottlePage>
                 Text(
                   '在浩瀚星空中捞一个瓶子',
                   style: TextStyle(
-                    fontSize: 16.sp,
+                    fontSize: 14.sp,
                     fontWeight: FontWeight.w500,
                     color: AppColors.starryTextPrimary,
                     letterSpacing: 0.5,
@@ -315,7 +315,7 @@ class _BottlePageState extends State<BottlePage>
                 Text(
                   '也许会遇到来自星辰的美好',
                   style: TextStyle(
-                    fontSize: 14.sp,
+                    fontSize: 12.sp,
                     color: AppColors.starryTextSecondary,
                     letterSpacing: 0.3,
                   ),
@@ -478,7 +478,7 @@ class _BottlePageState extends State<BottlePage>
                           Text(
                             bottle.author.nickname,
                             style: TextStyle(
-                              fontSize: 14.sp,
+                              fontSize: 13.sp,
                               fontWeight: FontWeight.w600,
                               color: AppColors.starryTextPrimary,
                             ),
@@ -486,7 +486,7 @@ class _BottlePageState extends State<BottlePage>
                           Text(
                             _formatTime(bottle.createdAt),
                             style: TextStyle(
-                              fontSize: 12.sp,
+                              fontSize: 11.sp,
                               color: AppColors.starryTextSecondary,
                             ),
                           ),
@@ -524,7 +524,7 @@ class _BottlePageState extends State<BottlePage>
                           Text(
                             '瓶子',
                             style: TextStyle(
-                              fontSize: 11.sp,
+                              fontSize: 10.sp,
                               color: Color(0xFF357ABD),
                               fontWeight: FontWeight.w600,
                             ),
@@ -547,7 +547,7 @@ class _BottlePageState extends State<BottlePage>
                   child: Text(
                     bottle.content,
                     style: TextStyle(
-                      fontSize: 15.sp,
+                      fontSize: 14.sp,
                       color: AppColors.textPrimary,
                       height: 1.5,
                     ),
