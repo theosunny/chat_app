@@ -1,67 +1,14 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../domain/entities/message.dart';
-import '../../domain/entities/user.dart';
 import 'user_model.dart';
 
 part 'message_model.g.dart';
 
-/// 消息模型
+/// 消息模型 - 与后端API保持一致
 @JsonSerializable()
 class MessageModel {
   @JsonKey(name: 'id')
-  final String id;
-  
-  @JsonKey(name: 'conversation_id')
-  final String conversationId;
-  
-  @JsonKey(name: 'sender')
-  final UserModel sender;
-  
-  @JsonKey(name: 'content')
-  final String content;
-  
-  @JsonKey(name: 'message_type')
-  final String messageType; // 'text', 'image', 'audio', 'video', 'file', 'system'
-  
-  @JsonKey(name: 'image_url')
-  final String? imageUrl;
-  
-  @JsonKey(name: 'audio_url')
-  final String? audioUrl;
-  
-  @JsonKey(name: 'video_url')
-  final String? videoUrl;
-  
-  @JsonKey(name: 'file_url')
-  final String? fileUrl;
-  
-  @JsonKey(name: 'file_name')
-  final String? fileName;
-  
-  @JsonKey(name: 'file_size')
-  final int? fileSize;
-  
-  @JsonKey(name: 'thumbnail_url')
-  final String? thumbnailUrl;
-  
-  @JsonKey(name: 'duration')
-  final int? duration; // 音频/视频时长（秒）
-  
-  @JsonKey(name: 'is_read')
-  final bool isRead;
-  
-  @JsonKey(name: 'is_recalled')
-  final bool isRecalled;
-  
-  @JsonKey(name: 'is_deleted')
-  final bool isDeleted;
-  
-  @JsonKey(name: 'status')
-  final String status; // 'sending', 'sent', 'delivered', 'read', 'failed'
-  
-  @JsonKey(name: 'reply_to')
-  final MessageModel? replyTo;
+  final int id;
   
   @JsonKey(name: 'created_at')
   final DateTime createdAt;
@@ -69,14 +16,30 @@ class MessageModel {
   @JsonKey(name: 'updated_at')
   final DateTime updatedAt;
   
-  @JsonKey(name: 'read_at')
-  final DateTime? readAt;
+  @JsonKey(name: 'conversation_id')
+  final int conversationId;
   
-  @JsonKey(name: 'recalled_at')
-  final DateTime? recalledAt;
+  @JsonKey(name: 'sender_id')
+  final int senderId;
   
-  @JsonKey(name: 'metadata')
-  final Map<String, dynamic>? metadata;
+  @JsonKey(name: 'receiver_id')
+  final int receiverId;
+  
+  @JsonKey(name: 'content')
+  final String content;
+  
+  @JsonKey(name: 'message_type')
+  final String messageType; // 'text', 'image', 'file'
+  
+  @JsonKey(name: 'is_read')
+  final bool isRead;
+  
+  // 关联对象
+  @JsonKey(name: 'sender')
+  final UserModel? sender;
+  
+  @JsonKey(name: 'receiver')
+  final UserModel? receiver;
   
   const MessageModel({
     required this.id,

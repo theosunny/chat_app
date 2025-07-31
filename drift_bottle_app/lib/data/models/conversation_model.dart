@@ -1,52 +1,51 @@
 import 'package:json_annotation/json_annotation.dart';
 
-import '../../domain/entities/message.dart';
 import 'user_model.dart';
 import 'message_model.dart';
 
 part 'conversation_model.g.dart';
 
-/// 会话模型
+/// 会话模型 - 与后端API保持一致
 @JsonSerializable()
 class ConversationModel {
   @JsonKey(name: 'id')
-  final String id;
+  final int id;
   
-  @JsonKey(name: 'type')
-  final String type; // 'private', 'group', 'system'
+  @JsonKey(name: 'created_at')
+  final DateTime createdAt;
   
-  @JsonKey(name: 'title')
-  final String? title;
+  @JsonKey(name: 'updated_at')
+  final DateTime updatedAt;
   
-  @JsonKey(name: 'description')
-  final String? description;
+  @JsonKey(name: 'user1_id')
+  final int user1Id;
   
-  @JsonKey(name: 'avatar_url')
-  final String? avatarUrl;
+  @JsonKey(name: 'user2_id')
+  final int user2Id;
   
-  @JsonKey(name: 'participants')
-  final List<UserModel> participants;
+  @JsonKey(name: 'last_message_id')
+  final int? lastMessageId;
   
-  @JsonKey(name: 'creator')
-  final UserModel? creator;
+  @JsonKey(name: 'last_message_content')
+  final String lastMessageContent;
   
-  @JsonKey(name: 'admin_ids')
-  final List<String> adminIds;
+  @JsonKey(name: 'last_message_time')
+  final DateTime lastMessageTime;
   
-  @JsonKey(name: 'last_message')
-  final MessageModel? lastMessage;
+  @JsonKey(name: 'user1_unread_count')
+  final int user1UnreadCount;
   
-  @JsonKey(name: 'last_message_at')
-  final DateTime? lastMessageAt;
+  @JsonKey(name: 'user2_unread_count')
+  final int user2UnreadCount;
   
-  @JsonKey(name: 'unread_count')
-  final int unreadCount;
+  @JsonKey(name: 'user1')
+  final UserModel? user1;
   
-  @JsonKey(name: 'is_muted')
-  final bool isMuted;
+  @JsonKey(name: 'user2')
+  final UserModel? user2;
   
-  @JsonKey(name: 'is_pinned')
-  final bool isPinned;
+  @JsonKey(name: 'messages')
+  final List<MessageModel>? messages;
   
   @JsonKey(name: 'is_archived')
   final bool isArchived;
@@ -60,12 +59,6 @@ class ConversationModel {
   @JsonKey(name: 'settings')
   final Map<String, dynamic>? settings;
   
-  @JsonKey(name: 'created_at')
-  final DateTime createdAt;
-  
-  @JsonKey(name: 'updated_at')
-  final DateTime updatedAt;
-  
   @JsonKey(name: 'deleted_at')
   final DateTime? deletedAt;
   
@@ -74,24 +67,22 @@ class ConversationModel {
   
   const ConversationModel({
     required this.id,
-    required this.type,
-    this.title,
-    this.description,
-    this.avatarUrl,
-    required this.participants,
-    this.creator,
-    required this.adminIds,
-    this.lastMessage,
-    this.lastMessageAt,
-    required this.unreadCount,
-    required this.isMuted,
-    required this.isPinned,
-    required this.isArchived,
-    required this.isDeleted,
-    required this.isActive,
-    this.settings,
     required this.createdAt,
     required this.updatedAt,
+    required this.user1Id,
+    required this.user2Id,
+    this.lastMessageId,
+    required this.lastMessageContent,
+    required this.lastMessageTime,
+    this.user1UnreadCount = 0,
+    this.user2UnreadCount = 0,
+    this.user1,
+    this.user2,
+    this.messages,
+    this.isArchived = false,
+    this.isDeleted = false,
+    this.isActive = true,
+    this.settings,
     this.deletedAt,
     this.metadata,
   });
