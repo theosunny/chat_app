@@ -5,6 +5,7 @@ import (
 	"strconv"
 
 	"chat_app_backend/services"
+
 	"github.com/gin-gonic/gin"
 )
 
@@ -35,7 +36,7 @@ func (h *BottleHandler) GetBottles(c *gin.Context) {
 	bottles, total, err := h.bottleService.GetBottles(page, limit)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{
-			"code": 500,
+			"code":    500,
 			"message": "获取漂流瓶列表失败",
 			"error":   err.Error(),
 		})
@@ -43,7 +44,7 @@ func (h *BottleHandler) GetBottles(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"code": 200,
+		"code":    200,
 		"message": "获取漂流瓶列表成功",
 		"data": gin.H{
 			"bottles": bottles,
@@ -60,7 +61,7 @@ func (h *BottleHandler) PickRandomBottle(c *gin.Context) {
 	userID, exists := c.Get("user_id")
 	if !exists {
 		c.JSON(http.StatusUnauthorized, gin.H{
-			"code": 401,
+			"code":    401,
 			"message": "未授权访问",
 		})
 		return
@@ -186,7 +187,7 @@ func (h *BottleHandler) GetMyBottles(c *gin.Context) {
 	bottles, total, err := h.bottleService.GetMyBottles(userID.(uint), page, limit)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{
-			"code": 500,
+			"code":    500,
 			"message": "获取我的漂流瓶失败",
 			"error":   err.Error(),
 		})
@@ -194,7 +195,7 @@ func (h *BottleHandler) GetMyBottles(c *gin.Context) {
 	}
 
 	c.JSON(http.StatusOK, gin.H{
-		"code": 200,
+		"code":    200,
 		"message": "获取我的漂流瓶成功",
 		"data": gin.H{
 			"bottles": bottles,
@@ -202,57 +203,6 @@ func (h *BottleHandler) GetMyBottles(c *gin.Context) {
 			"page":    page,
 			"limit":   limit,
 		},
-	})
-}
-
-// ReplyToBottle 回复漂流瓶
-func (h *BottleHandler) ReplyToBottle(c *gin.Context) {
-	// 从JWT中间件获取用户ID
-	userID, exists := c.Get("user_id")
-	if !exists {
-		c.JSON(http.StatusUnauthorized, gin.H{
-			"success": false,
-			"message": "未授权访问",
-		})
-		return
-	}
-
-	bottleIDStr := c.Param("id")
-	bottleID, err := strconv.ParseUint(bottleIDStr, 10, 32)
-	if err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{
-			"success": false,
-			"message": "漂流瓶ID格式错误",
-		})
-		return
-	}
-
-	var req struct {
-		Content string `json:"content" binding:"required"`
-	}
-
-	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{
-			"success": false,
-			"message": "请求参数错误",
-			"error":   err.Error(),
-		})
-		return
-	}
-
-	err = h.bottleService.ReplyToBottle(uint(bottleID), userID.(uint), req.Content)
-	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{
-			"success": false,
-			"message": "回复漂流瓶失败",
-			"error":   err.Error(),
-		})
-		return
-	}
-
-	c.JSON(http.StatusOK, gin.H{
-		"success": true,
-		"message": "回复漂流瓶成功",
 	})
 }
 
