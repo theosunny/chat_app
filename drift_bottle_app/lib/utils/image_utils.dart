@@ -1,4 +1,4 @@
-import '../services/api_service.dart';
+import '../core/constants/api_constants.dart';
 
 class ImageUtils {
   /// 构建完整的图片URL
@@ -17,12 +17,12 @@ class ImageUtils {
     // 如果是相对路径，拼接API基础URL
     if (imageUrl.startsWith('/')) {
       // 移除API路径中的/api部分，只保留基础域名和端口
-      final baseUrl = ApiService.baseUrl.replaceAll('/api', '');
+      final baseUrl = ApiConstants.baseUrl;
       return '$baseUrl$imageUrl';
     }
     
     // 如果不是以/开头的相对路径，添加/
-    final baseUrl = ApiService.baseUrl.replaceAll('/api', '');
+    final baseUrl = ApiConstants.baseUrl;
     return '$baseUrl/$imageUrl';
   }
   

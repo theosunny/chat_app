@@ -13,16 +13,17 @@ import (
 
 // User 用户模型
 type User struct {
-	ID        uint      `json:"id" gorm:"primaryKey"`
-	CreatedAt time.Time `json:"created_at"`
-	UpdatedAt time.Time `json:"updated_at"`
-	Phone     string    `json:"phone" gorm:"uniqueIndex;size:20"`
-	Nickname  string    `json:"nickname" gorm:"size:50"`
-	Avatar    string    `json:"avatar" gorm:"size:255"`
-	Gender    string    `json:"gender" gorm:"size:10;default:unknown"`
-	Age       int       `json:"age"`
-	Location  string    `json:"location" gorm:"size:100"`
-	Signature string    `json:"signature" gorm:"size:200"`
+	ID           uint      `json:"id" gorm:"primaryKey"`
+	CreatedAt    time.Time `json:"created_at"`
+	UpdatedAt    time.Time `json:"updated_at"`
+	Phone        string    `json:"phone" gorm:"uniqueIndex;size:20"`
+	ThirdPartyID string    `json:"third_party_id" gorm:"uniqueIndex;size:100"`
+	Nickname     string    `json:"nickname" gorm:"size:50"`
+	Avatar       string    `json:"avatar" gorm:"size:255"`
+	Gender       string    `json:"gender" gorm:"size:10;default:unknown"`
+	Age          int       `json:"age"`
+	Location     string    `json:"location" gorm:"size:100"`
+	Signature    string    `json:"signature" gorm:"size:200"`
 }
 
 // TableName 指定表名
@@ -118,6 +119,16 @@ func GetUserByID(userID uint) (*User, error) {
 func GetUserByPhone(phone string) (*User, error) {
 	var user User
 	err := db.Where("phone = ?", phone).First(&user).Error
+	if err != nil {
+		return nil, err
+	}
+	return &user, nil
+}
+
+// GetUserByThirdPartyID 根据第三方ID获取用户
+func GetUserByThirdPartyID(thirdPartyID string) (*User, error) {
+	var user User
+	err := db.Where("third_party_id = ?", thirdPartyID).First(&user).Error
 	if err != nil {
 		return nil, err
 	}

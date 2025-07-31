@@ -1,92 +1,150 @@
 name: drift_bottle_app
-description: "A new Flutter project."
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+description: "企业级漂流瓶社交应用"
+publish_to: 'none'
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-# In Windows, build-name is used as the major, minor, and patch parts
-# of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
 
 environment:
   sdk: ^3.6.0
+  flutter: ">=3.24.0"
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
 
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  # 基础图标
   cupertino_icons: ^1.0.8
   
+  # ===== 核心架构 =====
   # 状态管理
-  provider: ^6.1.2
-  
-  # 网络请求
-  dio: ^5.4.0
-  
-  # 本地存储
-  shared_preferences: ^2.2.2
-  
-  # UI组件
-  flutter_screenutil: ^5.9.0
-  cached_network_image: ^3.3.1
-  pull_to_refresh: ^2.0.0
-  photo_view: ^0.14.0
-  flutter_staggered_animations: ^1.1.1
-  
-  # SVG支持
-  flutter_svg: ^2.0.9
-  
-  # 第三方登录
-  fluwx: ^4.1.0
-  
-  # 图片选择
-  image_picker: ^1.0.7
-  
-  # 权限管理
-  permission_handler: ^11.3.0
+  provider: ^6.1.1
   
   # 路由管理
   go_router: ^13.2.0
   
-  # 时间格式化
-  intl: ^0.19.0
+  # 依赖注入
+  get_it: ^7.6.7
+  injectable: ^2.3.2
+  
+  # ===== 网络和数据 =====
+  # HTTP客户端
+  dio: ^5.4.0
+  retrofit: ^4.0.3
+  
+  # 本地存储
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.2.2
+  
+  # JSON序列化
+  json_annotation: ^4.8.1
+  
+  # 数据类生成
+  freezed_annotation: ^2.4.1
+  
+  # 对象比较
+  equatable: ^2.0.5
+  
+  # 函数式编程
+  dartz: ^0.10.1
+  
+  # ===== UI和用户体验 =====
+  # 响应式设计
+  flutter_screenutil: ^5.9.0
+  
+  # 图片处理
+  cached_network_image: ^3.3.1
+  image_picker: ^1.0.7
+  photo_view: ^0.14.0
+  
+  # SVG支持
+  flutter_svg: ^2.0.9
+  
+  # UI增强组件
+  shimmer: ^3.0.0
+  flutter_slidable: ^3.0.1
+  badges: ^3.1.2
+  pull_to_refresh: ^2.0.0
   
   # 动画
   lottie: ^3.1.0
+  flutter_staggered_animations: ^1.1.1
   
   # 图标
   font_awesome_flutter: ^10.7.0
+  
+  # ===== 功能模块 =====
+  # 第三方登录
+  fluwx: ^4.1.0
+  
+  # 权限管理
+  permission_handler: ^11.3.0
+  
+  # 消息推送
+  firebase_messaging: ^14.7.10
+  flutter_local_notifications: ^16.3.2
+  
+  # 环信 IM SDK
+  im_flutter_sdk: ^3.8.3+8
+  
+  # ===== 工具类 =====
+  # 时间格式化
+  intl: ^0.19.0
+  
+  # 日志
+  logger: ^2.0.2+1
+  
+  # 设备信息
+  device_info_plus: ^9.1.2
+  package_info_plus: ^4.2.0
+  
+  # 网络连接检测
+  connectivity_plus: ^5.0.2
+  internet_connection_checker: ^1.0.0+1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
+  # ===== 代码生成工具 =====
+  build_runner: ^2.4.7
+  
+  # JSON序列化生成
+  json_serializable: ^6.7.1
+  
+  # 数据类生成
+  freezed: ^2.4.7
+  
+  # 依赖注入生成
+  injectable_generator: ^2.4.1
+  
+  # Retrofit代码生成
+  retrofit_generator: ^7.0.8
+  
+  # ===== 代码质量工具 =====
+  # 代码规范
   flutter_lints: ^5.0.0
+  very_good_analysis: ^5.1.0
+  
+  # ===== 测试工具 =====
+  # 单元测试
+  mockito: ^5.4.4
+  
+  # 集成测试
+  integration_test:
+    sdk: flutter
+  
+  # 测试工具
+  fake_async: ^1.3.1
+  
+  # ===== 开发工具 =====
+  # 图标生成
+  flutter_launcher_icons: ^0.13.1
+  
+  # 启动屏生成
+  flutter_native_splash: ^2.3.10
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

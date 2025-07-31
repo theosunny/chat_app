@@ -41,6 +41,8 @@ func SetupRoutes() *gin.Engine {
 		{
 			user.POST("/send-code", userHandler.SendCode)     // 发送验证码
 			user.POST("/login", userHandler.Login)           // 手机号登录
+			user.POST("/login/qq", userHandler.LoginWithQQ)   // QQ登录
+			user.POST("/login/wechat", userHandler.LoginWithWechat) // 微信登录
 			
 			// 需要认证的路由
 			auth := user.Group("/")

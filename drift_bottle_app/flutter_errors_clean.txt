@@ -1,0 +1,738 @@
+﻿flutter : Flutter assets will be downloaded from https://mirrors.tuna.tsinghua.edu.cn/flutter. Make sure you trust this source!
+所在位置 行:1 字符: 1
++ flutter analyze 2>&1 | Out-File -FilePath flutter_errors_clean.txt -E ...
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Flutter assets ...st this source!:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Analyzing drift_bottle_app...                                   
+
+warning - This default clause is covered by the previous cases - lib\core\network\dio_client.dart:305:7 - unreachable_switch_default
+   info - Don't invoke 'print' in production code - lib\core\services\auth_service.dart:162:7 - avoid_print
+  error - The method 'updateOwnUserInfo' isn't defined for the type 'EMUserInfoManager' - lib\core\services\auth_service.dart:214:54 - undefined_method
+  error - The method 'changeAppPassword' isn't defined for the type 'EMClient' - lib\core\services\auth_service.dart:261:36 - undefined_method
+   info - Don't invoke 'print' in production code - lib\core\services\auth_service.dart:330:7 - avoid_print
+   info - 'currentUsername' is deprecated and shouldn't be used. Use #currentUserId to instead - lib\core\services\auth_service.dart:337:33 - deprecated_member_use
+  error - The method 'loadMessages' isn't defined for the type 'EMChatManager' - lib\core\services\chat_service.dart:188:51 - undefined_method
+  error - The method 'deleteMessage' isn't defined for the type 'EMChatManager' - lib\core\services\chat_service.dart:214:44 - undefined_method
+  error - Undefined class 'long' - lib\core\services\chat_service.dart:238:5 - undefined_class
+  error - Undefined class 'long' - lib\core\services\chat_service.dart:239:5 - undefined_class
+  error - 1 positional argument expected by 'searchMsgFromDB', but 0 found - lib\core\services\chat_service.dart:242:7 - not_enough_positional_arguments
+  error - The named parameter 'keywords' isn't defined - lib\core\services\chat_service.dart:242:7 - undefined_named_parameter
+  error - The named parameter 'conversationId' isn't defined - lib\core\services\chat_service.dart:243:7 - undefined_named_parameter
+  error - The named parameter 'startTime' isn't defined - lib\core\services\chat_service.dart:245:7 - undefined_named_parameter
+  error - The named parameter 'endTime' isn't defined - lib\core\services\chat_service.dart:246:7 - undefined_named_parameter
+  error - A value of type 'Object' can't be returned from the method 'getConversationUnreadCount' because it has a return type of 'Future<int>' - lib\core\services\chat_service.dart:258:12 - return_of_invalid_type
+  error - Class '_ChatMessageHandler' can't define method 'onMessagesReceived' and have field 'EMChatEventHandler.onMessagesReceived' with the same name - lib\core\services\chat_service.dart:347:8 - conflicting_method_and_field
+  error - Class '_ChatMessageHandler' can't define method 'onMessagesRead' and have field 'EMChatEventHandler.onMessagesRead' with the same name - lib\core\services\chat_service.dart:353:8 - conflicting_method_and_field
+  error - Class '_ChatMessageHandler' can't define method 'onMessagesDelivered' and have field 'EMChatEventHandler.onMessagesDelivered' with the same name - lib\core\services\chat_service.dart:358:8 - conflicting_method_and_field
+  error - Class '_ChatMessageHandler' can't define method 'onMessagesRecalled' and have field 'EMChatEventHandler.onMessagesRecalled' with the same name - lib\core\services\chat_service.dart:363:8 - conflicting_method_and_field
+  error - Class '_ChatMessageHandler' can't define method 'onConversationsUpdate' and have field 'EMChatEventHandler.onConversationsUpdate' with the same name - lib\core\services\chat_service.dart:368:8 - conflicting_method_and_field
+  error - Class '_ChatMessageHandler' can't define method 'onConversationRead' and have field 'EMChatEventHandler.onConversationRead' with the same name - lib\core\services\chat_service.dart:373:8 - conflicting_method_and_field
+  error - Class '_ChatContactHandler' can't define method 'onContactAdded' and have field 'EMContactEventHandler.onContactAdded' with the same name - lib\core\services\chat_service.dart:381:8 - conflicting_method_and_field
+  error - Class '_ChatContactHandler' can't define method 'onContactDeleted' and have field 'EMContactEventHandler.onContactDeleted' with the same name - lib\core\services\chat_service.dart:386:8 - conflicting_method_and_field
+  error - Class '_ChatContactHandler' can't define method 'onContactInvited' and have field 'EMContactEventHandler.onContactInvited' with the same name - lib\core\services\chat_service.dart:391:8 - conflicting_method_and_field
+  error - Class '_ChatContactHandler' can't define method 'onFriendRequestAccepted' and have field 'EMContactEventHandler.onFriendRequestAccepted' with the same name - lib\core\services\chat_service.dart:396:8 - conflicting_method_and_field
+  error - Class '_ChatContactHandler' can't define method 'onFriendRequestDeclined' and have field 'EMContactEventHandler.onFriendRequestDeclined' with the same name - lib\core\services\chat_service.dart:401:8 - conflicting_method_and_field
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:409:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:414:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:419:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:424:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:429:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:434:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:439:8 - override_on_non_overriding_member
+  error - Class '_ChatGroupHandler' can't define method 'onGroupDestroyed' and have field 'EMGroupEventHandler.onGroupDestroyed' with the same name - lib\core\services\chat_service.dart:444:8 - conflicting_method_and_field
+  error - Class '_ChatGroupHandler' can't define method 'onAutoAcceptInvitationFromGroup' and have field 'EMGroupEventHandler.onAutoAcceptInvitationFromGroup' with the same name - lib\core\services\chat_service.dart:449:8 - conflicting_method_and_field
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:454:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:459:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:464:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:469:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:474:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:479:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:484:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:489:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:494:8 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\core\services\chat_service.dart:499:8 - override_on_non_overriding_member
+  error - Undefined name 'EMPushDisplayStyle' - lib\core\services\notification_service.dart:102:9 - undefined_identifier
+   info - 'enableOfflinePush' is deprecated and shouldn't be used. Use #setSilentModeForAll to instead - lib\core\services\notification_service.dart:106:46 - deprecated_member_use
+  error - The method 'requestPermission' isn't defined for the type 'AndroidFlutterLocalNotificationsPlugin' - lib\core\services\notification_service.dart:119:13 - undefined_method
+   info - 'enableOfflinePush' is deprecated and shouldn't be used. Use #setSilentModeForAll to instead - lib\core\services\notification_service.dart:316:48 - deprecated_member_use
+   info - 'disableOfflinePush' is deprecated and shouldn't be used. Use #setSilentModeForAll to instead - lib\core\services\notification_service.dart:318:48 - deprecated_member_use
+  error - The named parameter 'end' is required, but there's no corresponding argument - lib\core\services\notification_service.dart:318:48 - missing_required_argument
+  error - The named parameter 'start' is required, but there's no corresponding argument - lib\core\services\notification_service.dart:318:48 - missing_required_argument
+  error - The method 'updatePushSilentMode' isn't defined for the type 'EMPushManager' - lib\core\services\notification_service.dart:333:46 - undefined_method
+  error - The method 'getPushConfigsFromServer' isn't defined for the type 'EMPushManager' - lib\core\services\notification_service.dart:345:61 - undefined_method
+warning - Unused import: 'dart:convert' - lib\data\datasources\auth_remote_datasource.dart:1:8 - unused_import
+warning - Unused import: '../../core/constants/api_constants.dart' - lib\data\datasources\auth_remote_datasource.dart:4:8 - unused_import
+warning - Unused import: '../../domain/entities/user.dart' - lib\data\datasources\auth_remote_datasource.dart:7:8 - unused_import
+warning - Unused import: '../models/user_model.dart' - lib\data\datasources\bottle_remote_datasource.dart:7:8 - unused_import
+  error - Undefined class 'ConversationType' - lib\data\datasources\message_remote_datasource.dart:61:5 - undefined_class
+  error - The expression doesn't evaluate to a function, so it can't be invoked - lib\data\datasources\message_remote_datasource.dart:308:9 - invocation_of_non_function_expression
+  error - Undefined class 'ConversationType' - lib\data\datasources\message_remote_datasource.dart:321:5 - undefined_class
+  error - The method 'multipartFile' isn't defined for the type 'DioClient' - lib\data\datasources\moment_remote_datasource.dart:158:53 - undefined_method
+  error - The method 'multipartFile' isn't defined for the type 'DioClient' - lib\data\datasources\moment_remote_datasource.dart:164:46 - undefined_method
+  error - The method 'postFormData' isn't defined for the type 'DioClient' - lib\data\datasources\moment_remote_datasource.dart:167:41 - undefined_method
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:171:37 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:174:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:174:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:175:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:180:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:180:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:202:53 - argument_type_not_assignable
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:205:41 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:208:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:208:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:209:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:214:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:214:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:222:53 - argument_type_not_assignable
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:225:37 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:228:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:228:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:229:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:234:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:234:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:250:53 - argument_type_not_assignable
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:253:41 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:256:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:256:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:257:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:262:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:262:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:278:53 - argument_type_not_assignable
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:281:41 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:284:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:284:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:285:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:290:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:290:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:312:53 - argument_type_not_assignable
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:315:41 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:318:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:318:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:319:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:324:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:324:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:344:53 - argument_type_not_assignable
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:347:41 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:350:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:350:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:351:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:356:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:356:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:364:53 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:368:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:368:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:369:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:374:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:374:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:382:53 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:386:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:386:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:387:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:392:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:392:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:400:53 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:404:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:404:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:405:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:410:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:410:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:418:53 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:422:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:422:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:423:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:428:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:428:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:444:53 - argument_type_not_assignable
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:447:41 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:450:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:450:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:451:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:456:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:456:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:464:53 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:468:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:468:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:469:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:474:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:474:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:482:53 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:486:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:486:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:487:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:492:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:492:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:509:53 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:513:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:513:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:514:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:519:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:519:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:537:53 - argument_type_not_assignable
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:540:37 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:543:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:543:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:544:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:549:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:549:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:557:53 - argument_type_not_assignable
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:560:42 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:563:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:563:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:564:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:569:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:569:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:587:53 - argument_type_not_assignable
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:590:41 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:593:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:593:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:594:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:599:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:599:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:615:53 - argument_type_not_assignable
+  error - The argument type 'Object?' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:618:41 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:621:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:621:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:622:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:627:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:627:29 - undefined_named_parameter
+  error - The argument type 'Response<dynamic>' can't be assigned to the parameter type 'Map<String, dynamic>'.  - lib\data\datasources\moment_remote_datasource.dart:644:53 - argument_type_not_assignable
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:648:11 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:648:11 - undefined_named_parameter
+  error - The named parameter 'statusCode' isn't defined - lib\data\datasources\moment_remote_datasource.dart:649:11 - undefined_named_parameter
+  error - 1 positional argument expected by 'ServerException.new', but 0 found - lib\data\datasources\moment_remote_datasource.dart:654:29 - not_enough_positional_arguments
+  error - The named parameter 'message' isn't defined - lib\data\datasources\moment_remote_datasource.dart:654:29 - undefined_named_parameter
+  error - The getter 'lastMessageAt' isn't defined for the type 'Conversation' - lib\data\models\conversation_model.dart:119:35 - undefined_getter
+  error - The getter 'isArchived' isn't defined for the type 'Conversation' - lib\data\models\conversation_model.dart:123:32 - undefined_getter
+  error - The named parameter 'isArchived' isn't defined - lib\data\models\conversation_model.dart:146:7 - undefined_named_parameter
+  error - The named parameter 'lastMessageAt' isn't defined - lib\data\models\conversation_model.dart:151:7 - undefined_named_parameter
+  error - The named parameter 'isOnline' isn't defined - lib\data\models\message_model.dart:147:7 - undefined_named_parameter
+  error - The named parameter 'lastActiveAt' isn't defined - lib\data\models\message_model.dart:148:7 - undefined_named_parameter
+  error - The named parameter 'status' is required, but there's no corresponding argument - lib\data\models\message_model.dart:153:12 - missing_required_argument
+  error - The named parameter 'isPinned' isn't defined - lib\data\models\message_model.dart:170:7 - undefined_named_parameter
+  error - The named parameter 'replyToMessageId' isn't defined - lib\data\models\message_model.dart:171:7 - undefined_named_parameter
+  error - The named parameter 'forwardFromMessageId' isn't defined - lib\data\models\message_model.dart:172:7 - undefined_named_parameter
+  error - The named parameter 'reactions' isn't defined - lib\data\models\message_model.dart:173:7 - undefined_named_parameter
+  error - The named parameter 'mentions' isn't defined - lib\data\models\message_model.dart:174:7 - undefined_named_parameter
+  error - The named parameter 'deletedAt' isn't defined - lib\data\models\message_model.dart:177:7 - undefined_named_parameter
+  error - Missing concrete implementations of 'AuthRepository.bindEmail', 'AuthRepository.bindPhone', 'AuthRepository.changePassword', 'AuthRepository.checkEmailAvailable', and 20 more - lib\data\repositories\auth_repository_impl.dart:14:7 - non_abstract_class_inherits_abstract_member
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:31:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:31:34 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:38:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:38:33 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:40:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:40:37 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:42:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:42:33 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:52:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:52:34 - extra_positional_arguments_could_be_named
+  error - The named parameter 'code' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:56:49 - missing_required_argument
+  error - The named parameter 'verificationCode' isn't defined - lib\data\repositories\auth_repository_impl.dart:58:9 - undefined_named_parameter
+  error - The argument type 'Map<String, dynamic>' can't be assigned to the parameter type 'UserModel'.  - lib\data\repositories\auth_repository_impl.dart:62:27 - argument_type_not_assignable
+  error - The method 'toEntity' isn't defined for the type 'Map' - lib\data\repositories\auth_repository_impl.dart:64:30 - undefined_method
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:66:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:66:33 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:68:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:68:37 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:70:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:70:31 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:72:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:72:33 - extra_positional_arguments_could_be_named
+  error - 'AuthRepositoryImpl.loginWithThirdParty' ('Future<Either<Failure, User>> Function({required String code, required String provider})') isn't a valid override of 'AuthRepository.loginWithThirdParty' ('Future<Either<Failure, User>> Function({required String accessToken, Map<String, dynamic>? extra, required String provider})') - lib\data\repositories\auth_repository_impl.dart:77:33 - invalid_override
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:82:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:82:34 - extra_positional_arguments_could_be_named
+  error - The argument type 'Map<String, dynamic>' can't be assigned to the parameter type 'UserModel'.  - lib\data\repositories\auth_repository_impl.dart:92:27 - argument_type_not_assignable
+  error - The method 'toEntity' isn't defined for the type 'Map' - lib\data\repositories\auth_repository_impl.dart:94:30 - undefined_method
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:96:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:96:33 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:98:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:98:37 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:100:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:100:31 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:102:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:102:33 - extra_positional_arguments_could_be_named
+  error - The method 'getUserInfo' isn't defined for the type 'TokenStorage' - lib\data\repositories\auth_repository_impl.dart:110:44 - undefined_method
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:118:21 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:118:36 - extra_positional_arguments_could_be_named
+  error - The method 'saveUserInfo' isn't defined for the type 'TokenStorage' - lib\data\repositories\auth_repository_impl.dart:124:27 - undefined_method
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:128:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:128:33 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:130:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:130:31 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:132:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:132:33 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:147:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:147:34 - extra_positional_arguments_could_be_named
+  error - The method 'saveUserInfo' isn't defined for the type 'TokenStorage' - lib\data\repositories\auth_repository_impl.dart:161:27 - undefined_method
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:165:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:165:33 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:167:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:167:37 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:169:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:169:31 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:171:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:171:33 - extra_positional_arguments_could_be_named
+  error - The method 'clearAll' isn't defined for the type 'TokenStorage' - lib\data\repositories\auth_repository_impl.dart:179:27 - undefined_method
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\auth_repository_impl.dart:182:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\auth_repository_impl.dart:182:33 - extra_positional_arguments_could_be_named
+  error - The method 'isLoggedIn' isn't defined for the type 'TokenStorage' - lib\data\repositories\auth_repository_impl.dart:188:32 - undefined_method
+  error - The method 'clearAll' isn't defined for the type 'TokenStorage' - lib\data\repositories\auth_repository_impl.dart:198:25 - undefined_method
+  error - The method 'saveUserInfo' isn't defined for the type 'TokenStorage' - lib\data\repositories\auth_repository_impl.dart:205:21 - undefined_method
+  error - The getter 'accessToken' isn't defined for the type 'UserModel' - lib\data\repositories\auth_repository_impl.dart:206:21 - undefined_getter
+  error - The getter 'accessToken' isn't defined for the type 'UserModel' - lib\data\repositories\auth_repository_impl.dart:207:49 - undefined_getter
+warning - Unused import: '../models/bottle_model.dart' - lib\data\repositories\bottle_repository_impl.dart:9:8 - unused_import
+  error - Missing concrete implementations of 'BottleRepository.deleteMedia', 'BottleRepository.getBottleDetail', 'BottleRepository.getBottleReplies', 'BottleRepository.getBottleStats', and 14 more - lib\data\repositories\bottle_repository_impl.dart:13:7 - non_abstract_class_inherits_abstract_member
+  error - 'BottleRepositoryImpl.sendBottle' ('Future<Either<Failure, Bottle>> Function({required String content, String? imageUrl, double? latitude, String? locationName, double? longitude, List<String>? tags})') isn't a valid override of 'BottleRepository.sendBottle' ('Future<Either<Failure, Bottle>> Function({required String content, required BottleContentType contentType, bool? isAnonymous, bool? isPrivate, BottleLocation? location, double? maxDriftDistance, List<String>? mediaFiles, BottlePriority? priority, List<String>? tags, BottleType? type, int? validHours})') - lib\data\repositories\bottle_repository_impl.dart:23:35 - invalid_override
+  error - 'BottleRepositoryImpl.pickBottle' ('Future<Either<Failure, Bottle?>> Function({double? latitude, double? longitude, int? radius})') isn't a valid override of 'BottleRepository.pickBottle' ('Future<Either<Failure, Bottle>> Function({required String bottleId, required double latitude, required double longitude})') - lib\data\repositories\bottle_repository_impl.dart:68:36 - invalid_override
+warning - The method doesn't override an inherited method - lib\data\repositories\bottle_repository_impl.dart:154:35 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\data\repositories\bottle_repository_impl.dart:343:41 - override_on_non_overriding_member
+  error - 'BottleRepositoryImpl.searchBottles' ('Future<Either<Failure, List<Bottle>>> Function({String? afterBottleId, String? beforeBottleId, double? latitude, int? limit, double? longitude, required String query, int? radius, List<String>? tags})') isn't a valid override of 'BottleRepository.searchBottles' ('Future<Either<Failure, List<Bottle>>> Function({BottleContentType? contentType, required String keyword, double? latitude, int? limit, double? longitude, int? offset, double? radius, String? sortBy, List<String>? tags, List<BottleType>? types})') - lib\data\repositories\bottle_repository_impl.dart:380:41 - invalid_override
+  error - 'BottleRepositoryImpl.getNearbyBottles' ('Future<Either<Failure, List<Bottle>>> Function({String? afterBottleId, String? beforeBottleId, required double latitude, int? limit, required double longitude, int? radius})') isn't a valid override of 'BottleRepository.getNearbyBottles' ('Future<Either<Failure, List<Bottle>>> Function({BottleContentType? contentType, required double latitude, int? limit, required double longitude, int? offset, double? radius, String? sortBy, List<String>? tags, List<BottleType>? types})') - lib\data\repositories\bottle_repository_impl.dart:439:41 - invalid_override
+  error - 'BottleRepositoryImpl.getTrendingBottles' ('Future<Either<Failure, List<Bottle>>> Function({String? afterBottleId, String? beforeBottleId, int? limit, String? timeRange})') isn't a valid override of 'BottleRepository.getTrendingBottles' ('Future<Either<Failure, List<Bottle>>> Function({int? limit, int? offset, String? timeRange})') - lib\data\repositories\bottle_repository_impl.dart:488:41 - invalid_override
+  error - 'BottleRepositoryImpl.getRecommendedBottles' ('Future<Either<Failure, List<Bottle>>> Function({String? afterBottleId, String? beforeBottleId, int? limit})') isn't a valid override of 'BottleRepository.getRecommendedBottles' ('Future<Either<Failure, List<Bottle>>> Function({double? latitude, int? limit, double? longitude, int? offset})') - lib\data\repositories\bottle_repository_impl.dart:527:41 - invalid_override
+  error - The method '_handleError' isn't defined for the type 'BottleRepositoryImpl' - lib\data\repositories\bottle_repository_impl.dart:642:19 - undefined_method
+  error - Target of URI doesn't exist: '../../domain/entities/conversation.dart' - lib\data\repositories\message_repository_impl.dart:7:8 - uri_does_not_exist
+warning - Unused import: '../models/message_model.dart' - lib\data\repositories\message_repository_impl.dart:10:8 - unused_import
+warning - Unused import: '../models/conversation_model.dart' - lib\data\repositories\message_repository_impl.dart:11:8 - unused_import
+  error - Missing concrete implementations of 'MessageRepository.blockConversation', 'MessageRepository.clearAllUnreadCounts', 'MessageRepository.clearDraft', 'MessageRepository.clearLocalData', and 42 more - lib\data\repositories\message_repository_impl.dart:15:7 - non_abstract_class_inherits_abstract_member
+  error - 'MessageRepositoryImpl.sendMessage' ('Future<Either<Failure, Message>> Function({String? audioUrl, required String content, required String conversationId, String? fileName, int? fileSize, String? fileUrl, String? imageUrl, String? messageType, Map<String, dynamic>? metadata, String? videoUrl})') isn't a valid override of 'MessageRepository.sendMessage' ('Future<Either<Failure, Message>> Function({required String content, required String conversationId, MessageMedia? media, List<String>? mentionedUserIds, String? replyToMessageId, required MessageType type})') - lib\data\repositories\message_repository_impl.dart:25:36 - invalid_override
+warning - The method doesn't override an inherited method - lib\data\repositories\message_repository_impl.dart:129:36 - override_on_non_overriding_member
+  error - 'MessageRepositoryImpl.deleteMessage' ('Future<Either<Failure, void>> Function(String)') isn't a valid override of 'MessageRepository.deleteMessage' ('Future<Either<Failure, void>> Function({bool deleteForEveryone, required String messageId})') - lib\data\repositories\message_repository_impl.dart:154:33 - invalid_override
+warning - The method doesn't override an inherited method - lib\data\repositories\message_repository_impl.dart:229:33 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\data\repositories\message_repository_impl.dart:324:41 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\data\repositories\message_repository_impl.dart:349:41 - override_on_non_overriding_member
+  error - The named parameter 'name' isn't defined - lib\data\repositories\message_repository_impl.dart:430:9 - undefined_named_parameter
+  error - The named parameter 'avatar' isn't defined - lib\data\repositories\message_repository_impl.dart:431:9 - undefined_named_parameter
+  error - 'MessageRepositoryImpl.searchMessages' ('Future<Either<Failure, List<Message>>> Function({String? afterMessageId, String? beforeMessageId, String? conversationId, DateTime? endTime, int? limit, required String query, DateTime? startTime})') isn't a valid override of 'MessageRepository.searchMessages' ('Future<Either<Failure, List<Message>>> Function({String? conversationId, DateTime? endTime, required String keyword, int? limit, int? offset, DateTime? startTime, MessageType? type})') - lib\data\repositories\message_repository_impl.dart:442:42 - invalid_override
+warning - The method doesn't override an inherited method - lib\data\repositories\message_repository_impl.dart:491:32 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\data\repositories\message_repository_impl.dart:513:35 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\data\repositories\message_repository_impl.dart:554:35 - override_on_non_overriding_member
+warning - The method doesn't override an inherited method - lib\data\repositories\message_repository_impl.dart:593:33 - override_on_non_overriding_member
+  error - The named parameter 'imagePaths' isn't defined - lib\data\repositories\moment_repository_impl.dart:34:9 - undefined_named_parameter
+  error - The named parameter 'videoPath' isn't defined - lib\data\repositories\moment_repository_impl.dart:35:9 - undefined_named_parameter
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:49:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:65:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:67:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:67:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:67:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:69:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:69:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:69:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:74:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:77:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:79:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:79:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:79:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:81:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:81:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:81:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:86:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:96:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:98:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:98:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:98:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:100:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:100:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:100:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:105:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:115:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:117:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:117:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:117:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:119:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:119:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:119:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:124:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:140:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:142:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:142:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:142:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:144:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:144:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:144:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:149:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:163:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:165:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:165:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:165:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:167:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:167:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:167:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:172:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:175:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:177:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:177:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:177:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:179:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:179:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:179:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:184:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:187:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:189:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:189:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:189:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:191:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:191:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:191:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:196:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:199:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:201:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:201:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:201:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:203:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:203:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:203:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:208:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:211:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:213:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:213:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:213:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:215:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:215:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:215:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:220:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:230:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:232:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:232:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:232:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:234:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:234:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:234:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:239:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:242:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:244:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:244:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:244:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:246:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:246:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:246:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:251:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:254:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:256:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:256:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:256:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:258:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:258:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:258:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:263:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:274:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:276:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:276:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:276:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:278:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:278:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:278:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:283:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:296:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:298:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:298:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:298:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:300:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:300:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:300:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:305:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:308:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:310:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:310:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:310:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:312:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:312:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:312:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:317:10 - non_type_as_type_argument
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:329:14 - undefined_identifier
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:331:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:331:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:331:43 - extra_positional_arguments_could_be_named
+  error - Undefined name 'Result' - lib\data\repositories\moment_repository_impl.dart:333:14 - undefined_identifier
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\data\repositories\moment_repository_impl.dart:333:29 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\data\repositories\moment_repository_impl.dart:333:44 - extra_positional_arguments_could_be_named
+  error - The name 'Result' isn't a type, so it can't be used as a type argument - lib\data\repositories\moment_repository_impl.dart:338:10 - non_type_as_type_argument
+warning - Unused import: '../entities/user.dart' - lib\domain\repositories\bottle_repository.dart:3:8 - unused_import
+  error - The argument type 'String?' can't be assigned to the parameter type 'String'.  - lib\domain\usecases\auth\register_usecase.dart:26:14 - argument_type_not_assignable
+  error - The named parameter 'birthday' isn't defined - lib\domain\usecases\auth\register_usecase.dart:30:7 - undefined_named_parameter
+  error - The named parameter 'inviteCode' isn't defined - lib\domain\usecases\auth\register_usecase.dart:31:7 - undefined_named_parameter
+  error - The named parameter 'deviceInfo' isn't defined - lib\domain\usecases\auth\register_usecase.dart:32:7 - undefined_named_parameter
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\domain\usecases\bottle\pick_bottle_usecase.dart:18:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\domain\usecases\bottle\pick_bottle_usecase.dart:18:37 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\domain\usecases\bottle\send_bottle_usecase.dart:18:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\domain\usecases\bottle\send_bottle_usecase.dart:18:37 - extra_positional_arguments_could_be_named
+  error - The argument type 'List<BottleMedia>?' can't be assigned to the parameter type 'List<String>?'.  - lib\domain\usecases\bottle\send_bottle_usecase.dart:25:19 - argument_type_not_assignable
+  error - The named parameter 'validDuration' isn't defined - lib\domain\usecases\bottle\send_bottle_usecase.dart:29:7 - undefined_named_parameter
+  error - The named parameter 'maxDistance' isn't defined - lib\domain\usecases\bottle\send_bottle_usecase.dart:30:7 - undefined_named_parameter
+  error - The getter 'size' isn't defined for the type 'BottleMedia' - lib\domain\usecases\bottle\send_bottle_usecase.dart:62:18 - undefined_getter
+warning - The operand can't be 'null', so the condition is always 'true' - lib\domain\usecases\conversation\get_conversations_usecase.dart:18:27 - unnecessary_null_comparison
+warning - The '!' will have no effect because the receiver can't be null - lib\domain\usecases\conversation\get_conversations_usecase.dart:18:49 - unnecessary_non_null_assertion
+warning - The left operand can't be null, so the right operand is never executed - lib\domain\usecases\conversation\get_conversations_usecase.dart:18:75 - dead_null_aware_expression
+  error - The argument type 'Object?' can't be assigned to the parameter type 'ConversationType?'.  - lib\domain\usecases\conversation\get_conversations_usecase.dart:63:13 - argument_type_not_assignable
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\domain\usecases\message\get_messages_usecase.dart:18:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\domain\usecases\message\get_messages_usecase.dart:18:37 - extra_positional_arguments_could_be_named
+  error - The named parameter 'message' is required, but there's no corresponding argument - lib\domain\usecases\message\send_message_usecase.dart:18:19 - missing_required_argument
+  error - Too many positional arguments: 0 expected, but 1 found - lib\domain\usecases\message\send_message_usecase.dart:18:37 - extra_positional_arguments_could_be_named
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:320:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:348:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:373:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:374:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:380:54 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:426:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:427:45 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:432:50 - deprecated_member_use
+  error - The getter 'replyCount' isn't defined for the type 'BottleModel' - lib\presentation\pages\bottle\bottle_detail_page.dart:446:38 - undefined_getter
+  error - The getter 'replies' isn't defined for the type 'BottleModel' - lib\presentation\pages\bottle\bottle_detail_page.dart:510:17 - undefined_getter
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:518:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:532:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:570:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:587:37 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:588:37 - deprecated_member_use
+  error - The getter 'replies' isn't defined for the type 'BottleModel' - lib\presentation\pages\bottle\bottle_detail_page.dart:602:34 - undefined_getter
+  error - The getter 'replies' isn't defined for the type 'BottleModel' - lib\presentation\pages\bottle\bottle_detail_page.dart:618:32 - undefined_getter
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:622:34 - deprecated_member_use
+  error - The getter 'replies' isn't defined for the type 'BottleModel' - lib\presentation\pages\bottle\bottle_detail_page.dart:625:37 - undefined_getter
+  error - Undefined class 'BottleReply' - lib\presentation\pages\bottle\bottle_detail_page.dart:634:26 - undefined_class
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:641:30 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:652:42 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:696:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:737:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:752:46 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\bottle_detail_page.dart:785:52 - deprecated_member_use
+  error - The getter 'error' isn't defined for the type 'AppColors' - lib\presentation\pages\bottle\bottle_detail_page.dart:858:62 - undefined_getter
+  error - Target of URI doesn't exist: '../../../core/constants/app_colors.dart' - lib\presentation\pages\bottle\bottle_page.dart:12:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../../core/utils/image_utils.dart' - lib\presentation\pages\bottle\bottle_page.dart:15:8 - uri_does_not_exist
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:92:19 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:93:19 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:94:19 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:108:21 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:109:15 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:110:15 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:123:25 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:124:15 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:125:15 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:157:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:158:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:165:20 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:179:28 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:188:30 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:198:22 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:204:24 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:244:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:245:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:246:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:259:22 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:268:22 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:277:22 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:293:25 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:294:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:298:30 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:303:32 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:312:28 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:334:28 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:345:28 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:359:29 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:360:29 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:365:36 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:444:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:445:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:452:18 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:457:20 - undefined_identifier
+  error - Undefined name 'ImageUtils' - lib\presentation\pages\bottle\bottle_page.dart:487:56 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:493:38 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:509:38 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:516:38 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:531:29 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:532:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:537:34 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:547:36 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:577:30 - undefined_identifier
+  error - The getter 'likeCount' isn't defined for the type 'BottleModel' - lib\presentation\pages\bottle\bottle_page.dart:609:38 - undefined_getter
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:610:69 - undefined_identifier
+  error - The getter 'replyCount' isn't defined for the type 'BottleModel' - lib\presentation\pages\bottle\bottle_page.dart:618:38 - undefined_getter
+  error - Undefined name 'ImageUtils' - lib\presentation\pages\bottle\bottle_page.dart:677:51 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:755:19 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:756:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:763:22 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:774:22 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:784:22 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:798:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:799:13 - undefined_identifier
+  error - Undefined name 'AppColors' - lib\presentation\pages\bottle\bottle_page.dart:804:20 - undefined_identifier
+warning - Unused import: '../../providers/auth_provider.dart' - lib\presentation\pages\bottle\create_bottle_page.dart:8:8 - unused_import
+warning - Unused import: '../../widgets/widgets/custom_button.dart' - lib\presentation\pages\bottle\create_bottle_page.dart:10:8 - unused_import
+warning - Unused import: '../../../utils/image_utils.dart' - lib\presentation\pages\bottle\create_bottle_page.dart:12:8 - unused_import
+  error - 1 positional argument expected by 'publishBottle', but 0 found - lib\presentation\pages\bottle\create_bottle_page.dart:105:7 - not_enough_positional_arguments
+  error - The named parameter 'content' isn't defined - lib\presentation\pages\bottle\create_bottle_page.dart:105:7 - undefined_named_parameter
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\bottle\create_bottle_page.dart:111:21 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\create_bottle_page.dart:235:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\create_bottle_page.dart:275:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\create_bottle_page.dart:384:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\create_bottle_page.dart:409:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\create_bottle_page.dart:482:34 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\create_bottle_page.dart:485:36 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\my_bottles_page.dart:219:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\my_bottles_page.dart:292:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\my_bottles_page.dart:293:49 - deprecated_member_use
+  error - The getter 'likeCount' isn't defined for the type 'BottleModel' - lib\presentation\pages\bottle\my_bottles_page.dart:372:37 - undefined_getter
+  error - The getter 'replyCount' isn't defined for the type 'BottleModel' - lib\presentation\pages\bottle\my_bottles_page.dart:380:37 - undefined_getter
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\my_bottles_page.dart:438:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\my_bottles_page.dart:494:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\bottle\my_bottles_page.dart:513:46 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\bottle\my_bottles_page.dart:557:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\bottle\my_bottles_page.dart:565:28 - use_build_context_synchronously
+   info - Parameter 'key' could be a super parameter - lib\presentation\pages\chat\em_chat_page.dart:13:9 - use_super_parameters
+  error - The named parameter 'count' isn't defined - lib\presentation\pages\chat\em_chat_page.dart:58:11 - undefined_named_parameter
+   info - Don't invoke 'print' in production code - lib\presentation\pages\chat\em_chat_page.dart:68:7 - avoid_print
+   info - Don't invoke 'print' in production code - lib\presentation\pages\chat\em_chat_page.dart:81:7 - avoid_print
+  error - Too many positional arguments: 2 expected, but 3 found - lib\presentation\pages\chat\em_chat_page.dart:94:9 - extra_positional_arguments_could_be_named
+  error - This expression has a type of 'void' so its value can't be used - lib\presentation\pages\chat\em_chat_page.dart:97:11 - use_of_void_result
+  error - This expression has a type of 'void' so its value can't be used - lib\presentation\pages\chat\em_chat_page.dart:99:25 - use_of_void_result
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\chat\em_chat_page.dart:106:28 - use_build_context_synchronously
+  error - The method '[]' can't be unconditionally invoked because the receiver can be 'null' - lib\presentation\pages\chat\em_chat_page.dart:154:29 - unchecked_use_of_nullable_value
+  error - The argument type 'String?' can't be assigned to the parameter type 'String'.  - lib\presentation\pages\chat\em_chat_page.dart:169:23 - argument_type_not_assignable
+warning - The receiver can't be null, so the null-aware operator '?.' is unnecessary - lib\presentation\pages\chat\em_chat_page.dart:184:33 - invalid_null_aware_operator
+  error - The getter 'content' isn't defined for the type 'EMMessageBody' - lib\presentation\pages\chat\em_chat_page.dart:184:35 - undefined_getter
+  error - The method '[]' can't be unconditionally invoked because the receiver can be 'null' - lib\presentation\pages\chat\em_chat_page.dart:211:29 - unchecked_use_of_nullable_value
+  error - The named parameter 'textInputAction' isn't defined - lib\presentation\pages\chat\em_chat_page.dart:272:21 - undefined_named_parameter
+warning - Unused import: '../widgets/widgets/custom_button.dart' - lib\presentation\pages\login_page.dart:11:8 - unused_import
+warning - Unused import: '../widgets/widgets/custom_text_field.dart' - lib\presentation\pages\login_page.dart:12:8 - unused_import
+warning - The value of the field '_isCodeSent' isn't used - lib\presentation\pages\login_page.dart:31:8 - unused_field
+   info - The private field _isLoading could be 'final' - lib\presentation\pages\login_page.dart:32:8 - prefer_final_fields
+warning - The value of the field '_isLoading' isn't used - lib\presentation\pages\login_page.dart:32:8 - unused_field
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\login_page.dart:128:62 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\login_page.dart:301:50 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\login_page.dart:315:52 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\login_page.dart:385:50 - deprecated_member_use
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\presentation\pages\login_page.dart:509:25 - sized_box_for_whitespace
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\presentation\pages\login_page.dart:538:32 - sized_box_for_whitespace
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\login_page.dart:652:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\login_page.dart:707:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\login_page.dart:710:41 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\login_page.dart:715:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\login_page.dart:770:34 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\login_page.dart:798:34 - deprecated_member_use
+warning - Unused import: 'package:font_awesome_flutter/font_awesome_flutter.dart' - lib\presentation\pages\main_page.dart:3:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\main_page.dart:62:35 - deprecated_member_use
+warning - The left operand can't be null, so the right operand is never executed - lib\presentation\pages\main_page.dart:107:40 - dead_null_aware_expression
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\message\chat_page.dart:80:28 - use_build_context_synchronously
+warning - The value of the local variable 'authProvider' isn't used - lib\presentation\pages\message\chat_page.dart:107:13 - unused_local_variable
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\message\chat_page.dart:128:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\message\chat_page.dart:143:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\message\chat_page.dart:160:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\message\chat_page.dart:171:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\message\chat_page.dart:188:28 - use_build_context_synchronously
+  error - The getter 'type' isn't defined for the type 'MessageModel' - lib\presentation\pages\message\chat_page.dart:302:36 - undefined_getter
+  error - Undefined name 'MessageType' - lib\presentation\pages\message\chat_page.dart:302:44 - undefined_identifier
+  error - Target of URI doesn't exist: '../../../core/utils/image_utils.dart' - lib\presentation\pages\message\message_page.dart:9:8 - uri_does_not_exist
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\message\message_page.dart:71:62 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\message\message_page.dart:73:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\message\message_page.dart:77:30 - use_build_context_synchronously
+  error - The getter 'type' isn't defined for the type 'MessageModel' - lib\presentation\pages\message\message_page.dart:102:21 - undefined_getter
+  error - There's no constant named 'text' in 'MessageType' - lib\presentation\pages\message\message_page.dart:103:24 - undefined_enum_constant
+  error - There's no constant named 'image' in 'MessageType' - lib\presentation\pages\message\message_page.dart:105:24 - undefined_enum_constant
+  error - There's no constant named 'system' in 'MessageType' - lib\presentation\pages\message\message_page.dart:107:24 - undefined_enum_constant
+  error - The argument type 'ConversationModel' can't be assigned to the parameter type 'EMConversation'.  - lib\presentation\pages\message\message_page.dart:231:56 - argument_type_not_assignable
+  error - The operator '>' isn't defined for the type 'Future<int> Function()' - lib\presentation\pages\message\message_page.dart:266:44 - undefined_operator
+  error - The argument type 'Object' can't be assigned to the parameter type 'String'.  - lib\presentation\pages\message\message_page.dart:320:21 - argument_type_not_assignable
+warning - The value of the local variable 'currentUserId' isn't used - lib\presentation\pages\message\message_page.dart:378:11 - unused_local_variable
+  error - Undefined name 'otherUser' - lib\presentation\pages\message\message_page.dart:421:36 - undefined_identifier
+  error - Undefined name 'otherUser' - lib\presentation\pages\message\message_page.dart:421:64 - undefined_identifier
+  error - Undefined name 'ImageUtils' - lib\presentation\pages\message\message_page.dart:422:52 - undefined_identifier
+  error - Undefined name 'otherUser' - lib\presentation\pages\message\message_page.dart:422:77 - undefined_identifier
+  error - Undefined name 'otherUser' - lib\presentation\pages\message\message_page.dart:424:26 - undefined_identifier
+  error - Undefined name 'otherUser' - lib\presentation\pages\message\message_page.dart:424:54 - undefined_identifier
+  error - Undefined name 'otherUser' - lib\presentation\pages\message\message_page.dart:426:27 - undefined_identifier
+  error - The operator '>' isn't defined for the type 'Future<int> Function()' - lib\presentation\pages\message\message_page.dart:431:46 - undefined_operator
+  error - The operator '>' isn't defined for the type 'Future<int> Function()' - lib\presentation\pages\message\message_page.dart:446:50 - undefined_operator
+  error - Undefined name 'otherUser' - lib\presentation\pages\message\message_page.dart:461:15 - undefined_identifier
+  error - The operator '>' isn't defined for the type 'Future<int> Function()' - lib\presentation\pages\message\message_page.dart:463:54 - undefined_operator
+  error - The getter 'lastMessage' isn't defined for the type 'EMConversation' - lib\presentation\pages\message\message_page.dart:469:28 - undefined_getter
+  error - The getter 'lastMessage' isn't defined for the type 'EMConversation' - lib\presentation\pages\message\message_page.dart:470:53 - undefined_getter
+  error - The operator '>' isn't defined for the type 'Future<int> Function()' - lib\presentation\pages\message\message_page.dart:475:49 - undefined_operator
+  error - The operator '>' isn't defined for the type 'Future<int> Function()' - lib\presentation\pages\message\message_page.dart:478:54 - undefined_operator
+  error - The getter 'lastMessage' isn't defined for the type 'EMConversation' - lib\presentation\pages\message\message_page.dart:488:32 - undefined_getter
+  error - The getter 'lastMessage' isn't defined for the type 'EMConversation' - lib\presentation\pages\message\message_page.dart:489:50 - undefined_getter
+  error - The operator '>' isn't defined for the type 'Future<int> Function()' - lib\presentation\pages\message\message_page.dart:496:46 - undefined_operator
+  error - Undefined name 'otherUser' - lib\presentation\pages\message\message_page.dart:505:32 - undefined_identifier
+warning - Unused import: '../../../data/models/moment_model.dart' - lib\presentation\pages\moment\create_moment_page.dart:6:8 - unused_import
+warning - Unused import: '../../providers/auth_provider.dart' - lib\presentation\pages\moment\create_moment_page.dart:8:8 - unused_import
+warning - Unused import: '../../widgets/widgets/custom_button.dart' - lib\presentation\pages\moment\create_moment_page.dart:10:8 - unused_import
+  error - Target of URI doesn't exist: '../../../core/constants/app_colors.dart' - lib\presentation\pages\moment\create_moment_page.dart:11:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../../core/utils/image_utils.dart' - lib\presentation\pages\moment\create_moment_page.dart:12:8 - uri_does_not_exist
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\moment\create_moment_page.dart:45:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\moment\create_moment_page.dart:66:32 - use_build_context_synchronously
+   info - Unnecessary braces in a string interpolation - lib\presentation\pages\moment\create_moment_page.dart:67:42 - unnecessary_brace_in_string_interps
+   info - Unnecessary braces in a string interpolation - lib\presentation\pages\moment\create_moment_page.dart:67:69 - unnecessary_brace_in_string_interps
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\moment\create_moment_page.dart:72:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\moment\create_moment_page.dart:90:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\moment\create_moment_page.dart:109:28 - use_build_context_synchronously
+  error - Target of URI doesn't exist: '../../../core/constants/app_colors.dart' - lib\presentation\pages\moment\moment_detail_page.dart:13:8 - uri_does_not_exist
+  error - Target of URI doesn't exist: '../../../core/utils/image_utils.dart' - lib\presentation\pages\moment\moment_detail_page.dart:14:8 - uri_does_not_exist
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\moment\moment_detail_page.dart:81:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\moment\moment_detail_page.dart:97:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\moment\moment_detail_page.dart:101:28 - use_build_context_synchronously
+  error - Undefined name 'ImageUtils' - lib\presentation\pages\moment\moment_detail_page.dart:125:59 - undefined_identifier
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\moment\moment_detail_page.dart:214:60 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\moment\moment_detail_page.dart:224:30 - use_build_context_synchronously
+  error - Undefined name 'ImageUtils' - lib\presentation\pages\moment\moment_detail_page.dart:276:25 - undefined_identifier
+  error - Undefined name 'ImageUtils' - lib\presentation\pages\moment\moment_detail_page.dart:299:25 - undefined_identifier
+  error - Undefined name 'ImageUtils' - lib\presentation\pages\moment\moment_detail_page.dart:339:52 - undefined_identifier
+  error - The getter 'images' isn't defined for the type 'MomentModel' - lib\presentation\pages\moment\moment_detail_page.dart:378:73 - undefined_getter
+  error - The getter 'images' isn't defined for the type 'MomentModel' - lib\presentation\pages\moment\moment_detail_page.dart:382:54 - undefined_getter
+  error - The getter 'comments' isn't defined for the type 'MomentModel' - lib\presentation\pages\moment\moment_detail_page.dart:433:42 - undefined_getter
+  error - The getter 'comments' isn't defined for the type 'MomentModel' - lib\presentation\pages\moment\moment_detail_page.dart:446:55 - undefined_getter
+  error - The getter 'comments' isn't defined for the type 'MomentModel' - lib\presentation\pages\moment\moment_detail_page.dart:449:62 - undefined_getter
+  error - Undefined name 'ImageUtils' - lib\presentation\pages\moment\moment_detail_page.dart:464:82 - undefined_identifier
+warning - Unused import: 'dart:math' - lib\presentation\pages\moment\moment_page.dart:1:8 - unused_import
+  error - The getter 'starryPrimary' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:75:29 - undefined_getter
+  error - The getter 'starrySecondary' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:76:29 - undefined_getter
+  error - The getter 'starryBackground' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:77:29 - undefined_getter
+  error - The getter 'starryPrimary' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:91:31 - undefined_getter
+  error - The getter 'starrySecondary' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:92:35 - undefined_getter
+  error - The getter 'starryBackground' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:93:35 - undefined_getter
+  error - The getter 'starryPrimary' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:106:35 - undefined_getter
+  error - The getter 'starrySecondary' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:107:35 - undefined_getter
+  error - The getter 'starryBackground' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:108:35 - undefined_getter
+  error - The getter 'starryCardBackground' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:140:23 - undefined_getter
+  error - The getter 'starryCardBackground' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:141:23 - undefined_getter
+  error - The getter 'starryAccent' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:148:30 - undefined_getter
+  error - The getter 'starryAccent' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:162:38 - undefined_getter
+  error - The getter 'starryTextPrimary' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:171:40 - undefined_getter
+  error - The getter 'starryAccent' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:181:32 - undefined_getter
+  error - The getter 'error' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:340:50 - undefined_getter
+  error - The getter 'error' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:355:52 - undefined_getter
+  error - The getter 'error' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:394:57 - undefined_getter
+  error - The getter 'error' isn't defined for the type 'AppColors' - lib\presentation\pages\moment\moment_page.dart:716:51 - undefined_getter
+warning - Unused import: 'dart:io' - lib\presentation\pages\profile\edit_profile_page.dart:1:8 - unused_import
+warning - Unused import: 'package:flutter_screenutil/flutter_screenutil.dart' - lib\presentation\pages\profile\edit_profile_page.dart:3:8 - unused_import
+warning - Unused import: 'package:image_picker/image_picker.dart' - lib\presentation\pages\profile\edit_profile_page.dart:5:8 - unused_import
+warning - Unused import: 'package:permission_handler/permission_handler.dart' - lib\presentation\pages\profile\edit_profile_page.dart:6:8 - unused_import
+warning - Unused import: '../../../data/models/user_model.dart' - lib\presentation\pages\profile\edit_profile_page.dart:8:8 - unused_import
+warning - Unused import: '../../../constants/app_colors.dart' - lib\presentation\pages\profile\edit_profile_page.dart:12:8 - unused_import
+warning - Unused import: 'dart:io' - lib\presentation\pages\profile\profile_page.dart:1:8 - unused_import
+warning - Unused import: 'package:flutter_screenutil/flutter_screenutil.dart' - lib\presentation\pages\profile\profile_page.dart:3:8 - unused_import
+warning - Unused import: '../../../data/models/user_model.dart' - lib\presentation\pages\profile\profile_page.dart:9:8 - unused_import
+warning - Unused import: '../../widgets/widgets/custom_text_field.dart' - lib\presentation\pages\profile\profile_page.dart:12:8 - unused_import
+warning - Unused import: '../../../constants/app_colors.dart' - lib\presentation\pages\profile\profile_page.dart:13:8 - unused_import
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\profile\profile_page.dart:48:30 - use_build_context_synchronously
+warning - The value of the local variable 'authProvider' isn't used - lib\presentation\pages\profile\profile_page.dart:62:15 - unused_local_variable
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\profile\profile_page.dart:62:56 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\profile\profile_page.dart:66:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\profile\profile_page.dart:71:28 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\profile\profile_page.dart:98:56 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\profile\profile_page.dart:109:30 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\profile\profile_page.dart:208:56 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\profile\profile_page.dart:273:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\profile\profile_page.dart:288:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\profile\profile_page.dart:294:49 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\profile\profile_page.dart:313:44 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\presentation\pages\profile\profile_page.dart:370:44 - deprecated_member_use
+warning - Unused import: 'package:provider/provider.dart' - lib\presentation\pages\profile\settings_page.dart:2:8 - unused_import
+warning - Unused import: '../../providers/auth_provider.dart' - lib\presentation\pages\profile\settings_page.dart:3:8 - unused_import
+warning - Unused import: '../../constants/app_colors.dart' - lib\presentation\pages\splash_page.dart:9:8 - unused_import
+warning - The value of the local variable 'preloadText' isn't used - lib\presentation\pages\splash_page.dart:69:15 - unused_local_variable
+   info - Don't use 'BuildContext's across async gaps - lib\presentation\pages\splash_page.dart:111:7 - use_build_context_synchronously
+   info - Use a 'SizedBox' to add whitespace to a layout - lib\presentation\pages\splash_page.dart:328:31 - sized_box_for_whitespace
+warning - Unused import: '../../core/di/injection.dart' - lib\presentation\providers\auth_provider.dart:5:8 - unused_import
+warning - The value of the field '_tokenStorage' isn't used - lib\presentation\providers\auth_provider.dart:9:22 - unused_field
+warning - Unused import: '../../core/di/injection.dart' - lib\presentation\providers\moment_provider.dart:3:8 - unused_import
+warning - Unused import: 'app_colors.dart' - lib\presentation\themes\app_text_styles.dart:2:8 - unused_import
+
+727 issues found. (ran in 1.2s)

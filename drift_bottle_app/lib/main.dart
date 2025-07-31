@@ -3,19 +3,24 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'providers/auth_provider.dart';
-import 'providers/bottle_provider.dart';
-import 'providers/moment_provider.dart';
-import 'providers/message_provider.dart';
-import 'pages/splash_page.dart';
-import 'pages/login_page.dart';
-import 'pages/main_page.dart';
-import 'constants/app_colors.dart';
-import 'services/api_service.dart';
+import 'presentation/providers/auth_provider.dart';
+import 'presentation/providers/bottle_provider.dart';
+import 'presentation/providers/moment_provider.dart';
+import 'presentation/providers/message_provider.dart';
+import 'presentation/pages/splash_page.dart';
+import 'presentation/pages/login_page.dart';
+import 'presentation/pages/main_page.dart';
+import 'core/di/injection.dart';
+import 'domain/repositories/auth_repository.dart';
+import 'domain/repositories/bottle_repository.dart';
+import 'domain/repositories/message_repository.dart';
+import 'domain/repositories/moment_repository.dart';
+import 'core/storage/token_storage.dart';
+import 'presentation/themes/app_colors.dart';
 
-void main() {
-  // 初始化API服务
-  ApiService().init();
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await configureDependencies();
   runApp(const MyApp());
 }
 
@@ -26,10 +31,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => AuthProvider()),
-        ChangeNotifierProvider(create: (_) => BottleProvider()),
-        ChangeNotifierProvider(create: (_) => MomentProvider()),
-        ChangeNotifierProvider(create: (_) => MessageProvider()),
+        ChangeNotifierProvider(create: (_) => AuthProvider(getIt<AuthRepository>(), getIt<TokenStorage>())),
+        ChangeNotifierProvider(create: (_) => BottleProvider(getIt<BottleRepository>())),
+        ChangeNotifierProvider(create: (_) => MomentProvider(getIt<MomentRepository>())),
+        ChangeNotifierProvider(create: (_) => MessageProvider(getIt<MessageRepository>())),
       ],
       child: ScreenUtilInit(
         designSize: const Size(414, 896),

@@ -75,6 +75,58 @@ func (s *UserService) UpdateUser(userID uint, updates map[string]interface{}) er
 	return database.UpdateUser(userID, updates)
 }
 
+// LoginWithThirdParty 第三方登录
+func (s *UserService) LoginWithThirdParty(provider, code string) (*database.User, string, error) {
+	// 模拟第三方登录验证
+	if code == "" {
+		return nil, "", errors.New("授权码不能为空")
+	}
+
+	// 模拟从第三方平台获取用户信息
+	var thirdPartyUserID string
+	var nickname string
+	var avatar string
+
+	switch provider {
+	case "qq":
+		// 模拟QQ登录
+		thirdPartyUserID = fmt.Sprintf("qq_%s", code)
+		nickname = "QQ用户" + code[:4]
+		avatar = "/uploads/avatars/qq_default.svg"
+	case "wechat":
+		// 模拟微信登录
+		thirdPartyUserID = fmt.Sprintf("wechat_%s", code)
+		nickname = "微信用户" + code[:4]
+		avatar = "/uploads/avatars/wechat_default.svg"
+	default:
+		return nil, "", errors.New("不支持的登录方式")
+	}
+
+	// 查找或创建用户
+	user, err := database.GetUserByThirdPartyID(thirdPartyUserID)
+	if err != nil {
+		if errors.Is(err, gorm.ErrRecordNotFound) {
+			// 用户不存在，创建新用户
+			user = &database.User{
+				ThirdPartyID: thirdPartyUserID,
+				Nickname:     nickname,
+				Avatar:       avatar,
+				Gender:       "unknown",
+			}
+			if err := database.CreateUser(user); err != nil {
+				return nil, "", fmt.Errorf("创建用户失败: %v", err)
+			}
+		} else {
+			return nil, "", fmt.Errorf("查询用户失败: %v", err)
+		}
+	}
+
+	// 生成JWT token
+	token := s.generateToken(user.ID)
+
+	return user, token, nil
+}
+
 // generateNickname 生成随机昵称
 func (s *UserService) generateNickname() string {
 	adjectives := []string{"快乐的", "勇敢的", "聪明的", "温柔的", "活泼的", "可爱的", "神秘的", "优雅的"}

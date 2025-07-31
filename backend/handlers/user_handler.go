@@ -114,6 +114,78 @@ func (h *UserHandler) GetProfile(c *gin.Context) {
 	})
 }
 
+// LoginWithQQ QQ登录
+func (h *UserHandler) LoginWithQQ(c *gin.Context) {
+	var req struct {
+		Code string `json:"code" binding:"required"`
+	}
+
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"success": false,
+			"message": "请求参数错误",
+			"error":   err.Error(),
+		})
+		return
+	}
+
+	// 模拟QQ登录逻辑
+	user, token, err := h.userService.LoginWithThirdParty("qq", req.Code)
+	if err != nil {
+		c.JSON(http.StatusUnauthorized, gin.H{
+			"success": false,
+			"message": "QQ登录失败",
+			"error":   err.Error(),
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"success": true,
+		"message": "QQ登录成功",
+		"data": gin.H{
+			"user":  user,
+			"token": token,
+		},
+	})
+}
+
+// LoginWithWechat 微信登录
+func (h *UserHandler) LoginWithWechat(c *gin.Context) {
+	var req struct {
+		Code string `json:"code" binding:"required"`
+	}
+
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"success": false,
+			"message": "请求参数错误",
+			"error":   err.Error(),
+		})
+		return
+	}
+
+	// 模拟微信登录逻辑
+	user, token, err := h.userService.LoginWithThirdParty("wechat", req.Code)
+	if err != nil {
+		c.JSON(http.StatusUnauthorized, gin.H{
+			"success": false,
+			"message": "微信登录失败",
+			"error":   err.Error(),
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"success": true,
+		"message": "微信登录成功",
+		"data": gin.H{
+			"user":  user,
+			"token": token,
+		},
+	})
+}
+
 // UpdateProfile 更新用户信息
 func (h *UserHandler) UpdateProfile(c *gin.Context) {
 	// 从JWT中间件获取用户ID
